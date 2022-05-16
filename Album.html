@@ -7,24 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-        <title>Album</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <title>Album</title>
     <style>
         .backgroundColor {
             background: rgb(35, 121, 9);
             background: linear-gradient(90deg, rgba(35, 121, 9, 1) 0%, rgba(19, 51, 10, 1) 32%, rgba(0, 0, 0, 1) 100%);
         }
-        .trasparentDark{
-            background-color: rgb(0, 0, 0,0.30);
+
+        .trasparentDark {
+            background-color: rgb(0, 0, 0, 0.30);
         }
-        .playBtn{
+
+        .playBtn {
             position: relative;
             background-color: #1DB954;
             width: 60px;
             height: 55px;
             border-radius: 50%;
         }
-        .forPlay{
+
+        .forPlay {
             color: white;
             position: absolute;
             left: 53%;
@@ -32,29 +35,40 @@
             bottom: 5px;
             font-size: 30px;
         }
-        .lineHeight{
+
+        .lineHeight {
             line-height: 80%;
         }
-        .bi-heart{
+
+        .bi-heart {
             font-size: 25px;
         }
-        .border-bot{
+
+        .border-bot {
             border-bottom: 1px rgba(255, 255, 255, 0.182) solid;
         }
-        .margins{
+
+        .margins {
             margin-left: 2rem;
         }
-        .bi-play{
+
+        .bi-play {
             display: none;
         }
-        .hoverIt:hover{
+
+        .hoverIt:hover {
             background-color: rgba(47, 46, 46, 0.392);
         }
-        .hoverIt:hover .bi-play{
+
+        .hoverIt:hover .bi-play {
             display: inline;
         }
-        .hoverIt:hover .numberHover{
+
+        .hoverIt:hover .numberHover {
             display: none;
+        }
+        .makeSmaller{
+            font-size: 13px;
         }
     </style>
 </head>
@@ -67,117 +81,145 @@
             <div class="col-10 backgroundColor">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled">Disabled</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
                 </div>
                 <div class="row">
-                    <div class="col-2 pr-0 ml-3">
-                        <img src="https://media.s-bol.com/qjNV0vx44023/550x544.jpg" class="rounded w-100 shadow-lg" alt="...">
+                    <div class="col-xl-2 col-lg-2 col-12  pr-0 ml-xl-3 ml-md-0">
+                        <img src="https://media.s-bol.com/qjNV0vx44023/550x544.jpg" class="rounded w-100 shadow-lg"
+                            alt="...">
                     </div>
-                    <div class="col-9  mt-auto">
+                    <div class="col-9 mt-xl-auto mt-lg-auto mt-2 mt-md-3">
                         <h6 class="text-white">Album</h6>
                         <h3 class="text-white align-self-end lineHeight">Bohemian Rhapsody(The Orginal Doundtrack)</h3>
-                        <p class="small text-white mb-1"><img src="https://i.scdn.co/image/af2b8e57f6d7b5d43a616bd1e27ba552cd8bfd42" alt="" style="border-radius:50%;" width="20" class="mr-1">Queen <span class="text-white-50">
-                            - 2018 - 22 songs, 1hr 19min
-                        </span>
+                        <p class="small text-white mb-1"><img
+                                src="https://i.scdn.co/image/af2b8e57f6d7b5d43a616bd1e27ba552cd8bfd42" alt=""
+                                style="border-radius:50%;" width="20" class="mr-1">Queen <span class="text-white-50">
+                                - 2018 - 22 songs, 1hr 19min
+                            </span>
                         </p>
                     </div>
-            </div>
-            <div class="row trasparentDark mt-4">
-                <div class="col-12 mt-4 d-flex">
-                    <div class="playBtn ml-3">
-                        <i class="bi bi-play-fill forPlay"></i>
-                    </div>
-                    <i class="bi bi-heart align-self-center ml-4 text-white-50"></i>
-                    <div class="btn-group dropleft align-self-start ml-3">
-                        <button type="button" class="btn bg-transparent text-white dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                          <b> . . .</b>
-                        </button>
-                        <div class="dropdown-menu">
-                          <!-- Dropdown menu links -->
-                        </div>
-                      </div>
-                </div> 
-                <div class="col-12 d-flex">
-                    <table class="table table-borderless text-white">
-                        <thead>
-                          <tr class="border-bot d-flex justify-content-between">
-                            <th scope="col" class="text-white-50">#<span class="ml-4">Title</span></th>
-                            <th scope="col" class="text-white-50"><i class="bi bi-clock"></i></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr class="d-flex justify-content-between hoverIt">
-                            <th scope="row" class="text-white-50"><span class="numberHover">1</span><i class="bi bi-play"></i><span class="ml-4 text-white">20th Century fox Fanfare</span><br>
-                            <small class="text-white-50 margins"><b>Queen</b></small>
-                            </th>
-                            <td class="text-white-50">4:00</td>
-                          </tr>
-                          <tr class="d-flex justify-content-between hoverIt">
-                            <th scope="row" class="text-white-50"><span class="numberHover">1</span><i class="bi bi-play"></i><span class="ml-4 text-white">20th Century fox Fanfare</span><br>
-                            <small class="text-white-50 margins"><b>Queen</b></small>
-                            </th>
-                            <td class="text-white-50">4:00</td>
-                          </tr>
-                          <tr class="d-flex justify-content-between hoverIt">
-                            <th scope="row" class="text-white-50"><span class="numberHover">1</span><i class="bi bi-play"></i><span class="ml-4 text-white">20th Century fox Fanfare</span><br>
-                            <small class="text-white-50 margins"><b>Queen</b></small>
-                            </th>
-                            <td class="text-white-50">4:00</td>
-                          </tr>
-                          <tr class="d-flex justify-content-between hoverIt">
-                            <th scope="row" class="text-white-50"><span class="numberHover">1</span><i class="bi bi-play"></i><span class="ml-4 text-white">20th Century fox Fanfare</span><br>
-                            <small class="text-white-50 margins"><b>Queen</b></small>
-                            </th>
-                            <td class="text-white-50">4:00</td>
-                          </tr>
-                          <tr class="d-flex justify-content-between hoverIt">
-                            <th scope="row" class="text-white-50"><span class="numberHover">1</span><i class="bi bi-play"></i><span class="ml-4 text-white">20th Century fox Fanfare</span><br>
-                            <small class="text-white-50 margins"><b>Queen</b></small>
-                            </th>
-                            <td class="text-white-50">4:00</td>
-                          </tr>
-                        </tbody>
-                      </table>
                 </div>
-        </div>
-        </div>
+                <div class="row trasparentDark mt-4">
+                    <div class="col-12 mt-4 d-flex">
+                        <div class="playBtn ml-3">
+                            <i class="bi bi-play-fill forPlay"></i>
+                        </div>
+                        <i class="bi bi-heart align-self-center ml-4 text-white-50"></i>
+                        <div class="btn-group dropright align-self-start ml-3">
+                            <button type="button" class="btn bg-transparent text-white dropdown-toggle"
+                                data-toggle="dropdown" aria-expanded="false">
+                                <b> . . .</b>
+                            </button>
+                            <div class="dropdown-menu bg-dark">
+                                <a class="dropdown-item text-white mb-1" href="#">Add to queue</a>
+                                <a class="dropdown-item text-white mb-1" href="#">Go to playlist radio</a>
+                                <a class="dropdown-item text-white mb-1 border-bottom border-top pb-2" href="#">Add to profile</a>
+                                <a class="dropdown-item text-white mb-1" href="#">Report</a>
+                                <a class="dropdown-item text-white mb-1" href="#">Remove from Your Library</a>
+                                <a class="dropdown-item text-white mb-1" href="#">Download</a>
+                                <a class="dropdown-item text-white mb-1" href="#">Share</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex">
+                        <table class="table table-borderless text-white">
+                            <thead>
+                                <tr class="border-bot d-flex justify-content-between">
+                                    <th scope="col" class="text-white-50">#<span class="ml-4">Title</span></th>
+                                    <th scope="col" class="text-white-50"><i class="bi bi-clock"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="d-flex justify-content-between hoverIt">
+                                    <th scope="row" class="text-white-50"><span class="numberHover">1</span><i
+                                            class="bi bi-play"></i><span class="ml-4 text-white makeSmaller">20th Century fox
+                                            Fanfare</span><br>
+                                        <small class="text-white-50 margins"><b>Queen</b></small>
+                                    </th>
+                                    <td class="text-white-50">4:00</td>
+                                </tr>
+                                <tr class="d-flex justify-content-between hoverIt">
+                                    <th scope="row" class="text-white-50"><span class="numberHover">1</span><i
+                                            class="bi bi-play"></i><span class="ml-4 text-white makeSmaller">20th Century fox
+                                            Fanfare</span><br>
+                                        <small class="text-white-50 margins"><b>Queen</b></small>
+                                    </th>
+                                    <td class="text-white-50">4:00</td>
+                                </tr>
+                                <tr class="d-flex justify-content-between hoverIt">
+                                    <th scope="row" class="text-white-50"><span class="numberHover">1</span><i
+                                            class="bi bi-play"></i><span class="ml-4 text-white makeSmaller">20th Century fox
+                                            Fanfare</span><br>
+                                        <small class="text-white-50 margins"><b>Queen</b></small>
+                                    </th>
+                                    <td class="text-white-50">4:00</td>
+                                </tr>
+                                <tr class="d-flex justify-content-between hoverIt">
+                                    <th scope="row" class="text-white-50"><span class="numberHover">1</span><i
+                                            class="bi bi-play"></i><span class="ml-4 text-white makeSmaller">20th Century fox
+                                            Fanfare</span><br>
+                                        <small class="text-white-50 margins"><b>Queen</b></small>
+                                    </th>
+                                    <td class="text-white-50">4:00</td>
+                                </tr>
+                                <tr class="d-flex justify-content-between hoverIt">
+                                    <th scope="row" class="text-white-50"><span class="numberHover">1</span><i
+                                            class="bi bi-play"></i><span class="ml-4 text-white makeSmaller">20th Century fox
+                                            Fanfare</span><br>
+                                        <small class="text-white-50 margins"><b>Queen</b></small>
+                                    </th>
+                                    <td class="text-white-50">4:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
