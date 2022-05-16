@@ -7,12 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <title>Album</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+        <title>Album</title>
     <style>
         .backgroundColor {
             background: rgb(35, 121, 9);
             background: linear-gradient(90deg, rgba(35, 121, 9, 1) 0%, rgba(19, 51, 10, 1) 32%, rgba(0, 0, 0, 1) 100%);
-            height: 100vh;
+        }
+        .trasparentDark{
+            background-color: rgb(0, 0, 0,0.30);
+        }
+        .playBtn{
+            position: relative;
+            background-color: #1DB954;
+            width: 60px;
+            height: 55px;
+            border-radius: 50%;
+        }
+        .bi-play-fill{
+            color: white;
+            position: absolute;
+            left: 53%;
+            transform: translateX(-50%);
+            bottom: 5px;
+            font-size: 30px;
+        }
+        .lineHeight{
+            line-height: 80%;
+        }
+        .bi-heart{
+            font-size: 25px;
+        }
+        .border-bot{
+            border-bottom: 1px rgba(255, 255, 255, 0.182) solid;
+        }
+        .margins{
+            margin-left: 2rem;
         }
     </style>
 </head>
@@ -24,7 +54,7 @@
             <div class="col-2"></div>
             <div class="col-10 backgroundColor">
                 <div class="col-12">
-                    <nav class="navbar navbar-expand-lg bg-dark">
+                    <nav class="navbar navbar-expand-lg">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -61,21 +91,81 @@
 </nav>
                 </div>
                 <div class="row">
-                    <div class="col-2 pr-0 ml-xl-3">
+                    <div class="col-2 pr-0 ml-3">
                         <img src="https://media.s-bol.com/qjNV0vx44023/550x544.jpg" class="rounded w-100 shadow-lg" alt="...">
                     </div>
                     <div class="col-9  mt-auto">
                         <h6 class="text-white">Album</h6>
-                        <h3 class="text-white align-self-end">Bohemian Rhapsody(The Orginal Doundtrack)</h3>
-                        <p class="small text-white"><img src="https://i.scdn.co/image/af2b8e57f6d7b5d43a616bd1e27ba552cd8bfd42" alt="" style="border-radius:50%;" width="20" class="mr-1">Queen <span class="text-white-50">
+                        <h3 class="text-white align-self-end lineHeight">Bohemian Rhapsody(The Orginal Doundtrack)</h3>
+                        <p class="small text-white mb-1"><img src="https://i.scdn.co/image/af2b8e57f6d7b5d43a616bd1e27ba552cd8bfd42" alt="" style="border-radius:50%;" width="20" class="mr-1">Queen <span class="text-white-50">
                             - 2018 - 22 songs, 1hr 19min
                         </span>
                         </p>
                     </div>
             </div>
+            <div class="row trasparentDark mt-4">
+                <div class="col-12 mt-4 d-flex">
+                    <div class="playBtn ml-3">
+                        <i class="bi bi-play-fill"></i>
+                    </div>
+                    <i class="bi bi-heart align-self-center ml-4 text-white-50"></i>
+                    <div class="btn-group dropleft align-self-start ml-3">
+                        <button type="button" class="btn bg-transparent text-white dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                          <b> . . .</b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <!-- Dropdown menu links -->
+                        </div>
+                      </div>
+                </div> 
+                <div class="col-12 d-flex">
+                    <table class="table table-borderless text-white">
+                        <thead>
+                          <tr class="border-bot d-flex justify-content-between">
+                            <th scope="col" class="text-white-50">#<span class="ml-4">Title</span></th>
+                            <th scope="col" class="text-white-50"><i class="bi bi-clock"></i></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="d-flex justify-content-between">
+                            <th scope="row" class="text-white-50">1<span class="ml-4 text-white">20th Century fox Fanfare</span><br>
+                            <small class="text-white-50 margins"><b>Queen</b></small>
+                            </th>
+                            <td class="text-white-50">4:00</td>
+                          </tr>
+                          <tr class="d-flex justify-content-between">
+                            <th scope="row" class="text-white-50">2<span class="ml-4 text-white">20th Century fox Fanfare</span><br>
+                            <small class="text-white-50 margins"><b>Queen</b></small>
+                            </th>
+                            <td class="text-white-50">4:00</td>
+                          </tr>
+                          <tr class="d-flex justify-content-between">
+                            <th scope="row" class="text-white-50">3<span class="ml-4 text-white">20th Century fox Fanfare</span><br>
+                            <small class="text-white-50 margins"><b>Queen</b></small>
+                            </th>
+                            <td class="text-white-50">4:00</td>
+                          </tr>
+                          <tr class="d-flex justify-content-between">
+                            <th scope="row" class="text-white-50">1<span class="ml-4 text-white">20th Century fox Fanfare</span><br>
+                            <small class="text-white-50 margins"><b>Queen</b></small>
+                            </th>
+                            <td class="text-white-50">4:00</td>
+                          </tr>
+                          <tr class="d-flex justify-content-between">
+                            <th scope="row" class="text-white-50">1<span class="ml-4 text-white">20th Century fox Fanfare</span><br>
+                            <small class="text-white-50 margins"><b>Queen</b></small>
+                            </th>
+                            <td class="text-white-50">4:00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+        </div>
         </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 
 </html>
