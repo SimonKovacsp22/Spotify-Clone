@@ -18,70 +18,52 @@
     <title>Home Page</title>
   </head>
   <body>
-    <div class="col-12 row p-0">
-      <div class="sidebar col-5 col-sm-5 col-md-3 col-lg-2">
+    <div class="body-container m-auto p-0">
+      <div class="sidebar">
         <div class="sidebar-top d-flex flex-column">
           <div class="logo">
-            <img id="logo" src="./asset/Spotify_Logo.png" alt="" />
+            <a href="#"
+              ><img id="logo" src="./asset/Spotify_Logo.png" alt=""
+            /></a>
           </div>
-          <div class="nav-link d-flex flex-column py-3">
-            <a class="nav-item"
-              ><img
-                class="px-2 nav-item-img"
-                src="./asset/house-door-fill.svg"
-              />Home</a
+          <div class="sidebar-link d-flex flex-column py-3">
+            <a class="sidebar-item"
+              ><i class="bi bi-house-door-fill sidebar-item-img"></i>Home</a
             >
-            <a class="nav-item"
-              ><img
-                class="px-2 nav-item-img"
-                src="./asset/search.svg"
-              />Search</a
+            <a class="sidebar-item"
+              ><i class="bi bi-search sidebar-item-img"></i>Search</a
             >
-            <a class="nav-item"
-              ><img
-                class="px-2 nav-item-img"
-                src="./asset/music-note-list.svg"
-              />Your Library</a
+            <a class="sidebar-item"
+              ><i class="bi bi-music-note-list sidebar-item-img"></i>Your
+              Library</a
             >
           </div>
-          <div class="song-action nav-link d-flex flex-column">
-            <a class="nav-item"
-              ><img
-                class="px-2 nav-item-img"
-                src="./asset/plus-square.svg"
-              />Create Playlist</a
+          <div class="song-action sidebar-link d-flex flex-column">
+            <a class="sidebar-item"
+              ><i class="bi bi-plus-square-fill sidebar-item-img"></i>Create
+              Playlist</a
             >
-            <a class="nav-item"
-              ><img
-                class="px-2 nav-item-img"
-                src="./asset/chat-right-heart.svg"
-              />Liked Songs</a
+            <a class="sidebar-item"
+              ><i class="bi bi-chat-square-heart sidebar-item-img"></i>Liked
+              Songs</a
             >
           </div>
         </div>
-        <div class="sidebar-bottom mt-5">
+        <div class="sidebar-bottom mt-2">
           <div class="feature-div d-flex flex-column">
+            <a class="feature-item my-1">Liked Songs fgfg</a>
+            <a class="feature-item my-1">Liked Songsv</a>
             <a class="feature-item my-1">Liked Songs</a>
+            <a class="feature-item my-1">Liked Songs vcv</a>
             <a class="feature-item my-1">Liked Songs</a>
-            <a class="feature-item my-1">Liked Songs</a>
-            <a class="feature-item my-1">Liked Songs</a>
-            <a class="feature-item my-1">Liked Songs</a>
-            <a class="feature-item my-1">Liked Songs</a>
-            <a class="feature-item my-1">Liked Songs</a>
-            <a class="feature-item my-1">Liked Songs</a>
-            <a class="feature-item my-1">Liked Songs</a>
-            <a class="feature-item my-1">Liked Songs</a>
-            <a class="feature-item my-1">Liked Songs</a>
-            <a class="feature-item my-1">Liked Songs</a>
+            <a class="feature-item my-1">Liked Songsccc</a>
             <a class="feature-item my-1">Liked Songs</a>
           </div>
         </div>
       </div>
-      <div
-        class="col-10 main-container-right col-7 col-sm-7 col-md-p col-lg-10 m-auto"
-      >
+      <div class="main-container-right">
         <div
-          class="row col-12 m-auto d-flex justify-content-between align-items-center nav-top"
+          class="m-auto d-flex col-11 justify-content-between align-items-center nav-top"
         >
           <div class="control-arrow col-6">
             <img class="arrow-left p-1" src="./asset/chevron-left.svg" alt="" />
@@ -126,24 +108,24 @@
             </div>
           </div>
         </div>
-        <div class="row col-12 m-auto">
-          <div class="row col-12 text-light"><h3>Good morning</h3></div>
+        <div class="row col-12 m-auto" id="main-div">
+          <div class="row col-11 text-light mx-3 p-0 mt-4">
+            <h3>Good morning</h3>
+          </div>
           <div class="row col-12">
-            <div class="header-card-container d-flex flex-wrap">
+            <div class="header-card-container">
               <div class="card col-2 mb-3 header-card">
                 <div class="row g-0">
-                  <div class="col-md-4">
+                  <div class="col-4">
                     <img
                       src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
                       class="img-fluid rounded-start header-card-img"
                       alt="..."
                     />
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-8">
                     <div class="card-body header-card-body">
-                      <p class="card-text">
-                        <small class="m-0">Last updated</small>
-                      </p>
+                      <p class="card-text">Last updated</p>
                       <p class="card-text">
                         <small class="m-0">Last updated</small>
                       </p>
@@ -153,18 +135,35 @@
               </div>
               <div class="card col-2 mb-3 header-card">
                 <div class="row g-0">
-                  <div class="col-md-4">
+                  <div class="col-4">
                     <img
                       src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
                       class="img-fluid rounded-start header-card-img"
                       alt="..."
                     />
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-8">
                     <div class="card-body header-card-body">
+                      <p class="card-text">Last updated</p>
                       <p class="card-text">
                         <small class="m-0">Last updated</small>
                       </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card col-2 mb-3 header-card">
+                <div class="row">
+                  <div class="col-4">
+                    <img
+                      src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                      class="img-fluid rounded-start header-card-img"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body header-card-body">
+                      <p class="card-text">Last updated</p>
                       <p class="card-text">
                         <small class="m-0">Last updated</small>
                       </p>
@@ -174,18 +173,16 @@
               </div>
               <div class="card col-2 mb-3 header-card">
                 <div class="row g-0">
-                  <div class="col-md-4">
+                  <div class="col-4">
                     <img
                       src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
                       class="img-fluid rounded-start header-card-img"
                       alt="..."
                     />
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-8">
                     <div class="card-body header-card-body">
-                      <p class="card-text">
-                        <small class="m-0">Last updated</small>
-                      </p>
+                      <p class="card-text">Last updated</p>
                       <p class="card-text">
                         <small class="m-0">Last updated</small>
                       </p>
@@ -195,18 +192,16 @@
               </div>
               <div class="card col-2 mb-3 header-card">
                 <div class="row g-0">
-                  <div class="col-md-4">
+                  <div class="col-4">
                     <img
                       src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
                       class="img-fluid rounded-start header-card-img"
                       alt="..."
                     />
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-8">
                     <div class="card-body header-card-body">
-                      <p class="card-text">
-                        <small class="m-0">Last updated</small>
-                      </p>
+                      <p class="card-text">Last updated</p>
                       <p class="card-text">
                         <small class="m-0">Last updated</small>
                       </p>
@@ -216,18 +211,16 @@
               </div>
               <div class="card col-2 mb-3 header-card">
                 <div class="row g-0">
-                  <div class="col-md-4">
+                  <div class="col-4">
                     <img
                       src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
                       class="img-fluid rounded-start header-card-img"
                       alt="..."
                     />
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-8">
                     <div class="card-body header-card-body">
-                      <p class="card-text">
-                        <small class="m-0">Last updated</small>
-                      </p>
+                      <p class="card-text">Last updated</p>
                       <p class="card-text">
                         <small class="m-0">Last updated</small>
                       </p>
@@ -237,18 +230,16 @@
               </div>
               <div class="card col-2 mb-3 header-card">
                 <div class="row g-0">
-                  <div class="col-md-4">
+                  <div class="col-4">
                     <img
                       src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
                       class="img-fluid rounded-start header-card-img"
                       alt="..."
                     />
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-8">
                     <div class="card-body header-card-body">
-                      <p class="card-text">
-                        <small class="m-0">Last updated</small>
-                      </p>
+                      <p class="card-text">Last updated</p>
                       <p class="card-text">
                         <small class="m-0">Last updated</small>
                       </p>
@@ -258,35 +249,14 @@
               </div>
               <div class="card col-2 mb-3 header-card">
                 <div class="row g-0">
-                  <div class="col-md-4">
+                  <div class="col-4">
                     <img
                       src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
                       class="img-fluid rounded-start header-card-img"
                       alt="..."
                     />
                   </div>
-                  <div class="col-md-8">
-                    <div class="card-body header-card-body">
-                      <p class="card-text">
-                        <small class="m-0">Last updated</small>
-                      </p>
-                      <p class="card-text">
-                        <small class="m-0">Last updated</small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card col-2 mb-3 header-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-                      class="img-fluid rounded-start header-card-img"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
+                  <div class="col-8">
                     <div class="card-body header-card-body">
                       <p class="card-text">
                         <small class="m-0">Last updated</small>
@@ -301,241 +271,232 @@
             </div>
           </div>
         </div>
+        <div class="header-card-container1">
+          <div
+            class="row col-11 m-auto pt-3 text-light d-flex justify-content-between"
+          >
+            <h4 class="col-6 p-0">Recently played</h4>
+            <small class="card-text col-6 text-end text-muted">SEE ALL</small>
+          </div>
+          <div
+            class="row col-11 recently-played m-auto justify-content-between"
+          >
+            <div class="card artist-card p-1">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="card-img-top artist-card-img"
+                alt="..."
+              />
+              <div class="card-body artist-card-body p-1">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Some quick example text to</p>
+                <i class="bi bi-play-circle-fill play-button-img"></i>
+              </div>
+            </div>
+            <div class="card artist-card p-1">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="card-img-top artist-card-img"
+                alt="..."
+              />
+              <div class="card-body artist-card-body p-1">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Some quick example text to</p>
+                <i class="bi bi-play-circle-fill play-button-img"></i>
+              </div>
+            </div>
+            <div class="card artist-card p-1">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="card-img-top artist-card-img"
+                alt="..."
+              />
+              <div class="card-body artist-card-body p-1">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Some quick example text to</p>
+                <i class="bi bi-play-circle-fill play-button-img"></i>
+              </div>
+            </div>
+            <div class="card artist-card p-1">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="card-img-top artist-card-img"
+                alt="..."
+              />
+              <div class="card-body artist-card-body p-1">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Some quick example text to</p>
+                <i class="bi bi-play-circle-fill play-button-img"></i>
+              </div>
+            </div>
+            <div class="card artist-card p-1">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="card-img-top artist-card-img"
+                alt="..."
+              />
+              <div class="card-body artist-card-body p-1">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Some quick example text to</p>
+                <i class="bi bi-play-circle-fill play-button-img"></i>
+              </div>
+            </div>
 
-        <div class="row col-12 m-auto pt-3 text-light">
-          <h3>Recently played</h3>
-        </div>
-        <div class="row col-12 recently-played m-auto justify-content-between">
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
-            </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
-            </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
-            </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
-            </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
-            </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
-            </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
-            </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
+            <div class="card artist-card p-1">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="card-img-top artist-card-img"
+                alt="..."
+              />
+              <div class="card-body artist-card-body p-1">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Some quick example text to</p>
+                <i class="bi bi-play-circle-fill play-button-img"></i>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row col-12 m-auto pt-3 text-light">
-          <h3>Shows to try</h3>
-          <p class="card-text pb-2">Some quick example text to</p>
-        </div>
-        <div class="row col-12 recently-played m-auto justify-content-between">
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
+        <div class="header-card-container2">
+          <div
+            class="row col-11 m-auto pt-3 text-light d-flex justify-content-between"
+          >
+            <h4 class="p-0">Shows to try</h4>
+            <div class="col-6 p-0">
+              <p class="card-text pb-2">Some quick example text to</p>
+            </div>
+            <div class="col-6 text-end">
+              <small class="card-text text-muted">SEE ALL</small>
             </div>
           </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
+          <div
+            class="row col-11 recently-played m-auto justify-content-between"
+          >
+            <div class="card artist-card p-1">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="card-img-top artist-card-img"
+                alt="..."
+              />
+              <div class="card-body artist-card-body p-1">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Some quick example text to</p>
+                <i class="bi bi-play-circle-fill play-button-img"></i>
+              </div>
             </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
+
+            <div class="card artist-card p-1">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="card-img-top artist-card-img"
+                alt="..."
+              />
+              <div class="card-body artist-card-body p-1">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Some quick example text to</p>
+                <i class="bi bi-play-circle-fill play-button-img"></i>
+              </div>
             </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
+            <div class="card artist-card p-1">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="card-img-top artist-card-img"
+                alt="..."
+              />
+              <div class="card-body artist-card-body p-1">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Some quick example text to</p>
+                <i class="bi bi-play-circle-fill play-button-img"></i>
+              </div>
             </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
+            <div class="card artist-card p-1">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="card-img-top artist-card-img"
+                alt="..."
+              />
+              <div class="card-body artist-card-body p-1">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Some quick example text to</p>
+                <i class="bi bi-play-circle-fill play-button-img"></i>
+              </div>
             </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
+            <div class="card artist-card p-1">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="card-img-top artist-card-img"
+                alt="..."
+              />
+              <div class="card-body artist-card-body p-1">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Some quick example text to</p>
+                <i class="bi bi-play-circle-fill play-button-img"></i>
+              </div>
             </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
-            </div>
-          </div>
-          <div class="card artist-card p-1">
-            <img
-              src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="card-img-top artist-card-img"
-              alt="..."
-            />
-            <div class="card-body artist-card-body p-1">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to</p>
+            <div class="card artist-card p-1">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="card-img-top artist-card-img"
+                alt="..."
+              />
+              <div class="card-body artist-card-body p-1">
+                <h6 class="card-title">Card title</h6>
+                <p class="card-text">Some quick example text to</p>
+                <i class="bi bi-play-circle-fill play-button-img"></i>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row col-12 player">
-      <div class="col-3 m-auto d-sm-none d-md-flex">
-        <div class="card col-11 mb-3 player-card p-0 bg-transparent">
-          <div class="row g-0 d-flex align-items-center">
-            <div class="col-md-2">
+    <div class="row col-12 player m-auto">
+      <div class="col-3">
+        <div class="card col-11 player-card p-0 bg-transparent">
+          <div class="row d-flex align-items-center">
+            <div class="col-3 pr-0">
               <img
                 src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-                class="img-fluid rounded-start player-card-img"
+                class="img-fluid rounded-start player-card-img px-0 ml-5"
                 alt="..."
               />
             </div>
-            <div class="col-md-8">
-              <div class="card-body player-card-body">
-                <p class="card-text">Last updated</p>
+            <div class="col-7 p-0 flex-grow-2">
+              <div class="card-body player-card-body px-0">
+                <p class="card-text">Last updated Last</p>
                 <p class="card-text">
-                  <small class="m-0">Last updated</small>
+                  <small class="m-0">Last updated Last updated</small>
                 </p>
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-2">
               <div class="card-body player-card-body d-flex">
-                <img class="px-2" src="./asset/suit-heart.svg" alt="" />
-                <img src="./asset/card-image.svg" alt="" />
+                <i class="bi bi-suit-heart player-controller mx-2"></i>
+                <i class="bi bi-card-image player-controller"></i>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-5 col-sm-7">
+      <div class="col-6 player-buttons">
         <div class="row col-12 text-center">
           <div
-            class="player-controler col-8 col-sm-8 col-lg-4 m-auto d-flex justify-content-between"
+            class="player-controler col-6 m-auto d-flex justify-content-between"
           >
-            <img src="./asset/shuffle.svg" alt="" />
-            <img src="./asset/skip-backward-fill.svg" alt="" />
-            <img src="./asset/play-circle.svg" alt="" />
-            <img src="./asset/skip-forward-fill.svg" alt="" />
-            <img src="./asset/arrow-repeat.svg" alt="" />
+            <i class="bi bi-shuffle player-controller"></i>
+            <i class="bi bi-skip-backward-fill player-controller"></i>
+            <img
+              src="./asset/play-circle.svg"
+              alt=""
+              class="player-controller"
+            />
+            <i class="bi bi-skip-forward-fill player-controller"></i>
+            <i class="bi bi-arrow-repeat player-controller"></i>
           </div>
         </div>
         <div class="row d-flex align-items-center justify-content-between mt-2">
           <small class="text-white col-1 player-duraton">1.25</small>
-          <div class="progress d-flex">
+          <div class="progress d-flex flex-grow-1">
             <div
-              class="progress-bar bg-secondary col-9"
+              class="progress-bar bg-secondary col-10"
               role="progressbar"
               style="width: 25%"
               aria-valuenow="25"
@@ -547,9 +508,9 @@
         </div>
       </div>
       <div class="col-3 d-flex align-items-center justify-content-end">
-        <i class="bi bi-list-stars text-white mx-2"></i>
-        <i class="bi bi-nintendo-switch text-white mx-2"></i>
-        <i class="bi bi-volume-up text-white mx-2"></i>
+        <i class="bi bi-list-stars mx-2 player-controller"></i>
+        <i class="bi bi-nintendo-switch mx-2 player-controller"></i>
+        <i class="bi bi-volume-up mx-2 player-controller"></i>
         <div
           class="progress d-flex align-items-center justify-content-center w-25 text-white"
         >
@@ -570,5 +531,22 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      window.onscroll = function () {
+        scrollNavbar()
+      }
+      function scrollNavbar() {
+        let navbarBg = document.querySelector(".nav-top")
+
+        //console.log(navLinks);
+        if (document.documentElement.scrollTop > 2) {
+          navbarBg.classList.add("scroll")
+          // Change the color of navLinks on scroll
+        } else {
+          navbarBg.classList.remove("scroll")
+          // Change the color of navLinks back to default
+        }
+      }
+    </script>
   </body>
 </html>

@@ -1,53 +1,78 @@
 body {
   background-color: #141414;
+  overflow-x: hidden;
 }
-
+.body-container {
+  width: 100%;
+  display: flex;
+  /* --bs-gutter-x: none; */
+}
 /* side bar-------------- */
 #logo {
-  height: 30px;
+  height: 40px;
   margin: 15px 0 0 10px;
 }
 .sidebar {
-  height: 100vh;
+  position: fixed;
+  width: 240px;
+  min-width: 240px;
+  min-height: 100%;
+  background-color: #000000;
 }
 .sidebar-top {
-  height: 35vh;
+  height: 38vh;
+  border-bottom: 0.5px solid gray;
+  margin-left: 20px;
 }
-.nav-item {
+.sidebar-item {
   text-decoration: none;
-  color: rgb(200, 200, 200);
+  color: rgb(189, 189, 189);
   list-style: none;
+  font-size: 16px;
+  padding: 5px 0;
+  width: 100%;
+  cursor: pointer;
 }
-.nav-item-img {
+.sidebar-item i {
+  font-size: 18px;
+}
+.sidebar-item-img {
   fill: white;
+  margin: 8px 14px 8px 6px;
 }
-.nav-link a:hover {
-  background-color: #323232;
-  color: rgb(240, 248, 255);
+.sidebar-link a:hover {
+  transition: 0.5s ease;
+  /* background-color: #323232; */
+  color: rgb(253, 253, 253);
+  font-weight: 400;
 }
-.nav-link a img {
+.sidebar-link a img {
   justify-content: center;
   height: 20px;
   margin: 8px 0 8px 0;
-  color: rgb(240, 248, 255);
+  color: rgb(189, 189, 189);
 }
-.bi {
-  fill: red;
+h6 {
+  color: rgb(200, 200, 200);
 }
-
 .feature-item {
   text-decoration: none;
   color: rgb(200, 200, 200);
   list-style: none;
   margin: 8px 0 8px 20px;
   padding: 5px 0 5px 5px;
+  cursor: pointer;
 }
 .feature-item:hover {
-  background-color: #323232;
-  color: aliceblue;
+  /* background-color: #323232; */
+  color: rgb(253, 253, 253);
+  transition: 1s ease;
 }
 /* main container right----------- */
 .main-container-right {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  /* --bs-gutter-x: none; */
   background: linear-gradient(
     0deg,
     rgba(20, 20, 20, 1) 50%,
@@ -56,18 +81,35 @@ body {
 }
 /* nav top-------------- */
 .nav-top {
-  height: 8vh;
+  position: fixed;
+  height: 10vh;
+  width: calc(100% - 240px);
+  background-color: #12121251;
+  z-index: 1;
+}
+.scroll {
+  background-color: #121212fd;
+  transition: 0.5s ease-in;
 }
 .arrow-left,
 .arrow-right {
-  background-color: #14141469;
+  background-color: #00000069;
   border-radius: 50%;
+  height: 40px;
+  cursor: pointer;
+  color: rgb(209, 210, 212);
+}
+.arrow-left {
+  margin-left: 20px;
 }
 .profile {
+  position: relative;
   justify-content: space-around;
   width: 170px;
-  background-color: #14141469;
+  background-color: #00000069;
   padding: 3px;
+  z-index: 2;
+  right: 3%;
 }
 .dropdown button {
   width: 70%;
@@ -88,22 +130,32 @@ body {
   object-fit: cover;
   border-radius: 50%;
 }
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: #141414;
+}
 
 /* header card-------------- */
+#main-div {
+  position: relative;
+  top: 8vh;
+}
 .header-card-container {
-  height: 20vh;
+  position: relative;
+  height: 15vh;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-width: 1200px;
 }
 .header-card {
-  background: linear-gradient(
-    0deg,
-    rgba(235, 235, 235, 0.19121151878720233) 0%,
-    rgba(20, 20, 20, 0.208018241476278) 100%
-  );
+  background-color: #38383876;
   height: 65px;
   min-width: 250px;
   margin: 0 20px;
   border: none;
+  position: relative;
+  cursor: pointer;
 }
 .header-card-img {
   min-height: 65px;
@@ -120,21 +172,64 @@ body {
   padding-bottom: 10px;
   font-weight: bold;
 }
+.header-card-container1 {
+  margin-top: 10vh;
+  height: 50vh;
+  justify-content: space-between;
+  min-width: 1200px;
+}
+.header-card-container2 {
+  height: 50vh;
+  justify-content: space-between;
+  min-width: 1200px;
+}
+
+.header-card:hover {
+  background-color: #3838388f;
+  -webkit-box-shadow: 1px 2px 15px 1px #2020209d;
+  box-shadow: 1px 2px 15px 1px #2020209d;
+}
+
+.header-card-body p small {
+  color: rgb(175, 175, 175);
+}
 /* recently played container -----------*/
 .recently-played {
-  height: 25vh;
+  height: 35vh;
 }
 .artist-card {
   background-color: #38383869;
-  min-width: 130px;
+  min-width: 170px;
   width: 130px;
-  height: 180px;
+  height: 280px;
+  cursor: pointer;
 }
 .artist-card img {
   min-width: 100%;
   height: 200px;
   object-fit: cover;
 }
+.play-button-img {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  font-size: 50px;
+  color: rgb(1, 129, 50);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.artist-card:hover .play-button-img {
+  bottom: 20px;
+  right: 10px;
+  opacity: 1;
+}
+.artist-card:hover {
+  background-color: #5e5d5d69;
+  -webkit-box-shadow: 1px 2px 15px 1px #000000;
+  box-shadow: 1px 2px 15px 1px #000000;
+}
+
+/* player-------------------------- */
 .player {
   position: fixed;
   left: 0;
@@ -143,7 +238,7 @@ body {
   background-color: #141414;
 }
 .artist-card-body {
-  color: white;
+  color: rgb(175, 175, 175);
 }
 .artist-card-body p {
   color: rgb(175, 175, 175);
@@ -155,9 +250,10 @@ body {
 .player {
   display: flex;
   justify-content: space-between;
-  background-color: #242424;
-  width: 100%;
+  background-color: #121212;
   align-items: center;
+  min-width: 1000px;
+  border-top: 0.5px solid rgb(57, 42, 0);
 }
 .player-card {
   height: 50px;
@@ -169,13 +265,23 @@ body {
   width: 45px;
   object-fit: cover;
 }
-.player-card-body {
+.player-card-body p {
   line-height: 5px;
-  color: white;
+  color: rgb(175, 175, 175);
+  font-size: 15px;
+}
+.player-controller {
+  color: rgb(175, 175, 175);
+  font-size: 14px;
+  cursor: pointer;
 }
 .progress {
-  height: 2px;
+  height: 1.5px;
   width: 70%;
+}
+.player-buttons {
+  width: 500px;
+  min-width: 500px;
 }
 .player-duraton {
   font-size: 10px;
