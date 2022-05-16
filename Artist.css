@@ -3,6 +3,7 @@
     --pbtextColor:#DFD3D5;
     --pbbgColor:#515151;
     --pbBorder:#252525;
+    
 }
 
 .container-fluid > div {
@@ -78,5 +79,40 @@ font-size: small;
     gap:6px
 }
 
+.main-content-container {
+    height: 100vh;
+}
 
+.main-content-container  {
+    height: 100vh;
+    background-color: darkblue;
+    
+    
+}
+
+.header {
+    height:316px ;
+    background-color: transparent;
+    
+}
+
+.header h1 {
+    color: #FBFBFB;
+    font-size: 100px ;
+    font-weight: 700;
+}
+
+.header span {
+    color:#F3F3F3 ;
+}
+
+.header p {
+    color:#BFBFBF ;
+    font-weight: 600;
+}
+
+.main-content {
+    padding-left: 30px;
+    width:calc(100% - 240px);
+}
 
