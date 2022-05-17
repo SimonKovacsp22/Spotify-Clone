@@ -51,7 +51,7 @@ function searchTitle() {
       .then((album) => {
         // console.log(album.data);
         for (let i = 0; i < album.data.length; i++) {
-          let image = album.data[i].md5_image
+          let image = album.data[i].album.cover
           let title = album.data[i].title
           let albumId = album.data[i].album.id
           let albumName = album.data[i].album.title
@@ -63,7 +63,7 @@ function searchTitle() {
           artistContainer.innerHTML += `   
                 <div class="card artist-card p-1 mb-1">
                   <img
-                    src="https://cdns-images.dzcdn.net/images/cover/${image}/500x500.jpg"
+                    src=${image}
                     class="card-img-top artist-card-img"
                     alt="..."
                   />
