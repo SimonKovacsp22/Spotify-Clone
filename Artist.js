@@ -17,8 +17,8 @@ const displaySongs = function (array){
        let artistSongLiNode =document.createElement('li')
        artistSongLiNode.innerHTML = `<img src="${element.img}"/>
                                      <p>${element.name}</p>
-                                     <p>${element.listens}</p>
-                                     <p>${element.duration}</p>`
+                                     <p class="listens">${element.listens}</p>
+                                     <p class="time">${element.duration}</p>`
                                      ;
     });
     songsOl.appendChild(artistSongLiNode)
