@@ -72,7 +72,8 @@ function searchTitle() {
                     <p class="card-text">${artist}</p>
                     <small class="card-text">${duration}</small>
                     
-                    <a href="./album-page.html?=${albumId}">
+                    <a href="./Artist.html?artist=${artist}">artist</a>
+                    <a href="./Album.html?=${albumId}">
                     <i class="bi bi-play-circle-fill play-button-img"></i>
                     </a>
                   </div>
@@ -82,7 +83,7 @@ function searchTitle() {
                     <div class="row g-0">
                       <div class="col-4">
                         <img
-                          src="https://cdns-images.dzcdn.net/images/cover/${image}/500x500.jpg"
+                          src=${image}
                           class="img-fluid rounded-start header-card-img"
                           alt="..."
                         />
