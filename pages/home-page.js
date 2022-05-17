@@ -30,37 +30,36 @@ const options = {
 
 //   .then((response) => response.json())
 //   .then((response) => console.log(response))
-//   .catch((err) => console.error(err))
+//   .catch((err) => console.error(err)) && textInput.length > 2
 
 let artistContainer = document.querySelector(".artist-container")
 let headerCardContainer = document.querySelector(".header-card-container")
 function searchTitle() {
+  artistContainer.innerHTML = ""
   let textInput = document.querySelector("#textInput").value
-  let best = "eminem"
-  if (textInput === "") {
-    textInput = best
-    fetch(
-      `https://deezerdevs-deezer.p.rapidapi.com/search?q=${textInput}`,
-      options
-    )
-      .then((data) => data.json())
-      // .then((data) => {
-      //   console.log(data)
-      //   return data
-      // })
-      .then((album) => {
-        // console.log(album.data);
-        for (let i = 0; i < album.data.length; i++) {
-          let image = album.data[i].album.cover
-          let title = album.data[i].title
-          let albumId = album.data[i].album.id
-          let albumName = album.data[i].album.title
-          console.log(albumName)
-          console.log(albumId)
-          // albumArr.push(title)
-          let duration = album.data[i].duration
-          let artist = album.data[i].artist.name
-          artistContainer.innerHTML += `   
+
+  let query = textInput !== "" ? textInput : "eminem"
+
+  fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${query}`, options)
+    .then((data) => data.json())
+    // .then((data) => {
+    //   console.log(data)
+    //   return data
+    // })
+    .then((album) => {
+      // console.log(album.data);
+      
+      for (let i = 0; i < album.data.length; i++) {
+        let image = album.data[i].album.cover
+        let title = album.data[i].title
+        let albumId = album.data[i].album.id
+        let albumName = album.data[i].album.title
+        console.log(albumName)
+        console.log(albumId)
+        // albumArr.push(title)
+        let duration = album.data[i].duration
+        let artist = album.data[i].artist.name
+        artistContainer.innerHTML += `   
                 <div class="card artist-card p-1 mb-1">
                   <img
                     src=${image}
@@ -78,7 +77,7 @@ function searchTitle() {
                     </a>
                   </div>
                 </div>`
-          headerCardContainer.innerHTML += `
+        headerCardContainer.innerHTML += `
                 <div class="card col-2 mb-3 header-card">
                     <div class="row g-0">
                       <div class="col-4">
@@ -100,11 +99,10 @@ function searchTitle() {
                       </div>
                     </div>
                   </div>`
-        }
-      })
-      .catch((err) => console.error(err))
-    document.querySelector("#textInput").value = ""
-  }
+      }
+    })
+    .catch((err) => console.error(err))
+  document.querySelector("#textInput").value = ""
 }
 
 //searchTitle()
