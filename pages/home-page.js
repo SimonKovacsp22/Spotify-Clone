@@ -1,24 +1,3 @@
-//navbar animation--------------------------------------
-window.onscroll = function () {
-  scrollNavbar()
-}
-window.onload = () => {
-  searchTitle()
-}
-function scrollNavbar() {
-  let navbarBg = document.querySelector(".nav-top")
-
-  //console.log(navLinks);
-  if (document.documentElement.scrollTop > 2) {
-    navbarBg.classList.add("scroll")
-    // Change the color of navLinks on scroll
-  } else {
-    navbarBg.classList.remove("scroll")
-    // Change the color of navLinks back to default
-  }
-}
-//-----------------------------------------------------
-
 // Fetch API link-------------------------------------
 const options = {
   method: "GET",
@@ -48,10 +27,10 @@ function searchTitle() {
     // })
     .then((album) => {
       // console.log(album.data);
-      
+
       for (let i = 0; i < album.data.length; i++) {
         let image = album.data[i].album.cover
-        let title = album.data[i].title
+        let title = album.data[i].title_short
         let albumId = album.data[i].album.id
         let albumName = album.data[i].album.title
         console.log(albumName)
@@ -67,9 +46,9 @@ function searchTitle() {
                     alt="..."
                   />
                   <div class="card-body artist-card-body p-1">
-                    <h6 class="card-title">${albumName}</h6>
-                    <p class="card-text">${artist}</p>
-                    <small class="card-text">${duration}</small>
+                    <h6 class="card-title p-0">${albumName}</h6>
+                    <p class="card-text p-0">${artist}</p>
+                    <small class="card-text p-0">${duration} min</small>
                     
                     <a href="./Artist.html?artist=${artist}">artist</a>
                     <a href="./album-page.html?=${albumId}">
@@ -90,10 +69,10 @@ function searchTitle() {
                       <div class="col-8">
                         <div class="card-body header-card-body">
                           <p class="card-text">
-                            <small class="m-0">${artist}</small>
+                          ${title}
                           </p>
                           <p class="card-text">
-                            <small class="m-0">${title}</small>
+                            <small class="m-0">${artist}</small>
                           </p>
                         </div>
                       </div>

@@ -1,52 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css"
+    />
+    <title>Album</title>
+    <link rel="stylesheet" href="album.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" />
-  <title>Album</title>
-  <link rel="stylesheet" href="album.css" />
-</head>
-
-<body>
-  <div class="body-container m-auto p-0">
-    <div class="sidebar">
-      <div class="sidebar-top d-flex flex-column">
-        <div class="logo">
-          <a href="#"><img id="logo" src="./asset/Spotify_Logo.png" alt="" /></a>
+  <body>
+    <div class="body-container m-auto p-0">
+      <div class="sidebar">
+        <div class="sidebar-top d-flex flex-column">
+          <div class="logo">
+            <a href="#"
+              ><img id="logo" src="./asset/Spotify_Logo.png" alt=""
+            /></a>
+          </div>
+          <div class="sidebar-link d-flex flex-column py-3">
+            <a class="sidebar-item"
+              ><i class="bi bi-house-door-fill sidebar-item-img"></i>Home</a
+            >
+            <a class="sidebar-item"
+              ><i class="bi bi-search sidebar-item-img"></i>Search</a
+            >
+            <a class="sidebar-item"
+              ><i class="bi bi-music-note-list sidebar-item-img"></i>Your
+              Library</a
+            >
+          </div>
+          <div class="song-action sidebar-link d-flex flex-column">
+            <a class="sidebar-item"
+              ><i class="bi bi-plus-square-fill sidebar-item-img"></i>Create
+              Playlist</a
+            >
+            <a class="sidebar-item"
+              ><i class="bi bi-chat-square-heart sidebar-item-img"></i>Liked
+              Songs</a
+            >
+          </div>
         </div>
-        <div class="sidebar-link d-flex flex-column py-3">
-          <a class="sidebar-item"><i class="bi bi-house-door-fill sidebar-item-img"></i>Home</a>
-          <a class="sidebar-item"><i class="bi bi-search sidebar-item-img"></i>Search</a>
-          <a class="sidebar-item"><i class="bi bi-music-note-list sidebar-item-img"></i>Your
-            Library</a>
-        </div>
-        <div class="song-action sidebar-link d-flex flex-column">
-          <a class="sidebar-item"><i class="bi bi-plus-square-fill sidebar-item-img"></i>Create
-            Playlist</a>
-          <a class="sidebar-item"><i class="bi bi-chat-square-heart sidebar-item-img"></i>Liked
-            Songs</a>
+        <div class="sidebar-bottom mt-2">
+          <div class="feature-div d-flex flex-column">
+            <a class="feature-item my-1">Liked Songs fgfg</a>
+            <a class="feature-item my-1">Liked Songsv</a>
+            <a class="feature-item my-1">Liked Songs</a>
+            <a class="feature-item my-1">Liked Songs vcv</a>
+            <a class="feature-item my-1">Liked Songs</a>
+            <a class="feature-item my-1">Liked Songsccc</a>
+            <a class="feature-item my-1">Liked Songs</a>
+          </div>
         </div>
       </div>
-      <div class="sidebar-bottom mt-2">
-        <div class="feature-div d-flex flex-column">
-          <a class="feature-item my-1">Liked Songs fgfg</a>
-          <a class="feature-item my-1">Liked Songsv</a>
-          <a class="feature-item my-1">Liked Songs</a>
-          <a class="feature-item my-1">Liked Songs vcv</a>
-          <a class="feature-item my-1">Liked Songs</a>
-          <a class="feature-item my-1">Liked Songsccc</a>
-          <a class="feature-item my-1">Liked Songs</a>
-        </div>
-      </div>
-    </div>
-    <div class="backgroundColor p-0">
-      <div class="col-12 p-0">
-        <!-- <nav class="navbar navbar-expand-lg">
+      <div class="backgroundColor p-0">
+        <div class="col-12 p-0">
+          <!-- <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="#">Navbar</a>
             <button
               class="navbar-toggler"
@@ -108,175 +126,227 @@
               </form>
             </div>
           </nav> -->
-        <div class="m-auto d-flex col-11 justify-content-between align-items-center nav-top p-0">
-          <div class="control-arrow col-6">
-            <img class="arrow-left p-1" src="./asset/chevron-left.svg" alt="" />
-            <img class="arrow-right p-1" src="./asset/chevron-right.svg" alt="" />
+          <div
+            class="m-auto d-flex col-11 justify-content-between align-items-center nav-top p-0"
+          >
+            <div class="control-arrow col-6">
+              <img
+                class="arrow-left p-1"
+                src="./asset/chevron-left.svg"
+                alt=""
+              />
+              <img
+                class="arrow-right p-1"
+                src="./asset/chevron-right.svg"
+                alt=""
+              />
+            </div>
+            <div class="profile rounded-pill col-6 text-right">
+              <div class="dropdown">
+                <img
+                  class="profile-img mx-2"
+                  src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg"
+                  alt=""
+                />
+                <button
+                  class="btn dropdown-toggle p-0"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Farshad
+                </button>
+                <ul
+                  class="dropdown-menu bg-dark"
+                  aria-labelledby="dropdownMenuButton1"
+                >
+                  <li>
+                    <a class="dropdown-item text-light" href="#">Action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-light" href="#"
+                      >Another action</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-light" href="#"
+                      >Something else here</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="profile rounded-pill col-6 text-right">
-            <div class="dropdown">
-              <img class="profile-img mx-2" src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg"
-                alt="" />
-              <button class="btn dropdown-toggle p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Farshad
+        </div>
+        <div class="row mt-5 albumContainer"></div>
+        <div class="row trasparentDark mt-4 ml-0">
+          <div class="col-12 mt-4 d-flex">
+            <div class="playBtn ml-3">
+              <i class="bi bi-play-fill forPlay"></i>
+            </div>
+            <i class="bi bi-heart align-self-center ml-4 text-white-50"></i>
+            <div class="btn-group dropright align-self-start ml-3">
+              <button
+                type="button"
+                class="btn bg-transparent text-white dropdown-toggle"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <b> . . .</b>
               </button>
-              <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton1">
-                <li>
-                  <a class="dropdown-item text-light" href="#">Action</a>
-                </li>
-                <li>
-                  <a class="dropdown-item text-light" href="#">Another action</a>
-                </li>
-                <li>
-                  <a class="dropdown-item text-light" href="#">Something else here</a>
-                </li>
-              </ul>
+              <div class="dropdown-menu bg-dark">
+                <a class="dropdown-item text-white mb-1" href="#"
+                  >Add to queue</a
+                >
+                <a class="dropdown-item text-white mb-1" href="#"
+                  >Go to playlist radio</a
+                >
+                <a
+                  class="dropdown-item text-white mb-1 border-bottom border-top pb-2"
+                  href="#"
+                  >Add to profile</a
+                >
+                <a class="dropdown-item text-white mb-1" href="#">Report</a>
+                <a class="dropdown-item text-white mb-1" href="#"
+                  >Remove from Your Library</a
+                >
+                <a class="dropdown-item text-white mb-1" href="#">Download</a>
+                <a class="dropdown-item text-white mb-1" href="#">Share</a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row mt-5 albumContainer">
-      </div>
-      <div class="row trasparentDark mt-4 ml-0">
-        <div class="col-12 mt-4 d-flex">
-          <div class="playBtn ml-3">
-            <i class="bi bi-play-fill forPlay"></i>
-          </div>
-          <i class="bi bi-heart align-self-center ml-4 text-white-50"></i>
-          <div class="btn-group dropright align-self-start ml-3">
-            <button type="button" class="btn bg-transparent text-white dropdown-toggle" data-toggle="dropdown"
-              aria-expanded="false">
-              <b> . . .</b>
-            </button>
-            <div class="dropdown-menu bg-dark">
-              <a class="dropdown-item text-white mb-1" href="#">Add to queue</a>
-              <a class="dropdown-item text-white mb-1" href="#">Go to playlist radio</a>
-              <a class="dropdown-item text-white mb-1 border-bottom border-top pb-2" href="#">Add to profile</a>
-              <a class="dropdown-item text-white mb-1" href="#">Report</a>
-              <a class="dropdown-item text-white mb-1" href="#">Remove from Your Library</a>
-              <a class="dropdown-item text-white mb-1" href="#">Download</a>
-              <a class="dropdown-item text-white mb-1" href="#">Share</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 d-flex">
-          <table class="table table-borderless text-white">
-            <thead>
-              <tr class="border-bot d-flex justify-content-between">
-                <th scope="col" class="text-white-50">
-                  #<span class="ml-4">Title</span>
-                </th>
-                <th scope="col" class="text-white-50">
-                  <i class="bi bi-clock"></i>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row col-12 player m-auto">
-    <div class="col-3">
-      <div class="card col-11 player-card p-0 bg-transparent">
-        <div class="row d-flex align-items-center">
-          <div class="col-3 pr-0">
-            <img src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
-              class="img-fluid rounded-start player-card-img px-0" alt="..." />
-          </div>
-          <div class="col-7 p-0 flex-grow-2">
-            <div class="card-body player-card-body px-0">
-              <p class="card-text">Last updated Last</p>
-              <p class="card-text">
-                <small class="m-0">Last updated Last updated</small>
-              </p>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card-body player-card-body d-flex">
-              <i class="bi bi-suit-heart player-controller mx-2"></i>
-              <i class="bi bi-card-image player-controller"></i>
-            </div>
+          <div class="col-12 d-flex">
+            <table class="table table-borderless text-white">
+              <thead>
+                <tr class="border-bot d-flex justify-content-between">
+                  <th scope="col" class="text-white-50">
+                    #<span class="ml-4">Title</span>
+                  </th>
+                  <th scope="col" class="text-white-50">
+                    <i class="bi bi-clock"></i>
+                  </th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-6 player-buttons">
-      <div class="row col-12 text-center">
-        <div class="player-controler col-6 m-auto d-flex justify-content-between">
-          <i class="bi bi-shuffle player-controller"></i>
-          <i class="bi bi-skip-backward-fill player-controller"></i>
-          <img src="./asset/play-circle.svg" alt="" class="player-controller" />
-          <i class="bi bi-skip-forward-fill player-controller"></i>
-          <i class="bi bi-arrow-repeat player-controller"></i>
+    <div class="row col-12 player m-auto">
+      <div class="col-3">
+        <div class="card col-11 player-card p-0 bg-transparent">
+          <div class="row d-flex align-items-center">
+            <div class="col-3 pr-0">
+              <img
+                src="https://static.iphoneitalia.com/wp-content/uploads/2019/03/apple-music-note-800x420.jpg"
+                class="img-fluid rounded-start player-card-img px-0"
+                alt="..."
+              />
+            </div>
+            <div class="col-7 p-0 flex-grow-2">
+              <div class="card-body player-card-body px-0">
+                <p class="card-text">Last updated Last</p>
+                <p class="card-text">
+                  <small class="m-0">Last updated Last updated</small>
+                </p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card-body player-card-body d-flex">
+                <i class="bi bi-suit-heart player-controller mx-2"></i>
+                <i class="bi bi-card-image player-controller"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row d-flex align-items-center justify-content-between mt-2">
-        <small class="text-white col-1 player-duraton">1.25</small>
-        <div class="progress d-flex flex-grow-1">
-          <div class="progress-bar bg-secondary col-10" role="progressbar" style="width: 25%" aria-valuenow="25"
-            aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="col-6 player-buttons">
+        <div class="row col-12 text-center">
+          <div
+            class="player-controler col-6 m-auto d-flex justify-content-between"
+          >
+            <i class="bi bi-shuffle player-controller"></i>
+            <i class="bi bi-skip-backward-fill player-controller"></i>
+            <img
+              src="./asset/play-circle.svg"
+              alt=""
+              class="player-controller"
+            />
+            <i class="bi bi-skip-forward-fill player-controller"></i>
+            <i class="bi bi-arrow-repeat player-controller"></i>
+          </div>
         </div>
-        <small class="text-white col-1 player-duraton">1.25</small>
+        <div class="row d-flex align-items-center justify-content-between mt-2">
+          <small class="text-white col-1 player-duraton">1.25</small>
+          <div class="progress d-flex flex-grow-1">
+            <div
+              class="progress-bar bg-secondary col-10"
+              role="progressbar"
+              style="width: 25%"
+              aria-valuenow="25"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <small class="text-white col-1 player-duraton">1.25</small>
+        </div>
+      </div>
+      <div
+        class="col-3 d-flex align-items-center justify-content-end controller-right"
+      >
+        <i class="bi bi-list-stars mx-2 player-controller"></i>
+        <i class="bi bi-nintendo-switch mx-2 player-controller"></i>
+        <i class="bi bi-volume-up mx-2 player-controller"></i>
+        <div
+          class="progress d-flex align-items-center justify-content-center w-25 text-white"
+        >
+          <div
+            class="progress-bar bg-secondary col-9"
+            role="progressbar"
+            style="width: 25%"
+            aria-valuenow="25"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
       </div>
     </div>
-    <div class="col-3 d-flex align-items-center justify-content-end controller-right">
-      <i class="bi bi-list-stars mx-2 player-controller"></i>
-      <i class="bi bi-nintendo-switch mx-2 player-controller"></i>
-      <i class="bi bi-volume-up mx-2 player-controller"></i>
-      <div class="progress d-flex align-items-center justify-content-center w-25 text-white">
-        <div class="progress-bar bg-secondary col-9" role="progressbar" style="width: 25%" aria-valuenow="25"
-          aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-    </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-    crossorigin="anonymous"></script>
-  <script>
-    window.onscroll = function () {
-      scrollNavbar()
-    }
-    function scrollNavbar() {
-      let navbarBg = document.querySelector(".nav-top")
-
-      //console.log(navLinks);
-      if (document.documentElement.scrollTop > 2) {
-        navbarBg.classList.add("scroll")
-        // Change the color of navLinks on scroll
-      } else {
-        navbarBg.classList.remove("scroll")
-        // Change the color of navLinks back to default
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./pages/navbar.js"></script>
+    <script>
+      window.onload = () => {
+        musicFetch()
       }
-    }
-  </script>
-  <script>
-    window.onload = () =>{
-      musicFetch();
-    }
-    const musicFetch = async () => {
-      try {
-        const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062");
-        const musics = await response.json();
-        console.log(musics);
-        renderAlbum(musics);
-        renderTracks(musics)
-      } catch (err) {
-        console.log(err);
+      const musicFetch = async () => {
+        try {
+          const response = await fetch(
+            "https://striveschool-api.herokuapp.com/api/deezer/album/75621062"
+          )
+          const musics = await response.json()
+          console.log(musics)
+          renderAlbum(musics)
+          renderTracks(musics)
+        } catch (err) {
+          console.log(err)
+        }
       }
-    };
-    const renderAlbum = (obj) => {
-      let durationHr = Math.floor(obj.duration/3600);
-      let durationMin = Math.floor(obj.duration%3600/60);
-      let album = document.querySelector('.albumContainer');
-      album.innerHTML = `  <div class="col-xl-2 col-lg-2 col-12 pr-0 ml-xl-3 ml-md-0">
+      const renderAlbum = (obj) => {
+        let durationHr = Math.floor(obj.duration / 3600)
+        let durationMin = Math.floor((obj.duration % 3600) / 60)
+        let album = document.querySelector(".albumContainer")
+        album.innerHTML = `  <div class="col-xl-2 col-lg-2 col-12 pr-0 ml-xl-3 ml-md-0">
           <img src="${obj.cover}" class="rounded w-100 shadow-lg" alt="..." />
         </div>
         <div class="col-9 mt-xl-auto mt-lg-auto mt-2 mt-md-3">
@@ -290,37 +360,36 @@
             <span class="text-white-50"> - ${obj.release_date} - ${obj.nb_tracks} songs, ${durationHr}hr ${durationMin}min </span>
           </p>
         </div>`
-    };
-    const renderTracks = (obj) =>{
-      let musicContainer = document.querySelector("tbody");
-      let tracksCon = obj.tracks.data;
-      let counter = 0;
-      console.log(tracksCon);
-      for (let i = 0; i < tracksCon.length; i++) {
-        const track = tracksCon[i];
-        let durationMin = Math.floor(track.duration/60);
-        let durationSec = Math.floor(track.duration%60);
-        counter= counter + 1;
-        // musicContainer.innerHTML = `<tr class="d-flex justify-content-between hoverIt">
-                // <th scope="row" class="text-white-50">
-                //   <span class="numberHover">1</span><i class="bi bi-play"></i><span
-                //     class="ml-4 text-white makeSmaller">20th Century fox Fanfare</span><br />
-                //   <small class="text-white-50 margins"><b>Queen</b></small>
-                // </th>
-                // <td class="text-white-50">4:00</td>
-        //       </tr>`
-        let tr = document.createElement("tr");
-        tr.className = "d-flex justify-content-between hoverIt"
-        tr.innerHTML = `<th scope="row" class="text-white-50">
+      }
+      const renderTracks = (obj) => {
+        let musicContainer = document.querySelector("tbody")
+        let tracksCon = obj.tracks.data
+        let counter = 0
+        console.log(tracksCon)
+        for (let i = 0; i < tracksCon.length; i++) {
+          const track = tracksCon[i]
+          let durationMin = Math.floor(track.duration / 60)
+          let durationSec = Math.floor(track.duration % 60)
+          counter = counter + 1
+          // musicContainer.innerHTML = `<tr class="d-flex justify-content-between hoverIt">
+          // <th scope="row" class="text-white-50">
+          //   <span class="numberHover">1</span><i class="bi bi-play"></i><span
+          //     class="ml-4 text-white makeSmaller">20th Century fox Fanfare</span><br />
+          //   <small class="text-white-50 margins"><b>Queen</b></small>
+          // </th>
+          // <td class="text-white-50">4:00</td>
+          //       </tr>`
+          let tr = document.createElement("tr")
+          tr.className = "d-flex justify-content-between hoverIt"
+          tr.innerHTML = `<th scope="row" class="text-white-50">
                   <span class="numberHover">${counter}</span><i class="bi bi-play"></i><span
                     class="ml-4 text-white makeSmaller">${track.title}</span><br />
                   <small class="text-white-50 margins"><b>${track.artist.name}</b></small>
                 </th>
                 <td class="text-white-50">${durationMin}:${durationSec}</td>`
-                musicContainer.appendChild(tr);
+          musicContainer.appendChild(tr)
+        }
       }
-    };
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

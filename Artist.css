@@ -1,150 +1,143 @@
-:root{
-    --commonText:#e3e3e3;
-    --sideBarWidth:240px;
+:root {
+  --commonText: #e3e3e3;
+  --sideBarWidth: 240px;
 }
-.main-content-container  {
-    height: 100vh;
- 
-      
+.main-content-container {
+  height: 100vh;
 }
 
 .header {
-    height:416px ;
-    padding: 0px 32px 24px 32px ;
-
-    
+  height: 416px;
+  padding: 0px 32px 24px 32px;
 }
 
 .header h1 {
-    color: #FBFBFB;
-    font-size: 96px ;
-    line-height: 96px;
-    font-weight: 700;
-    margin-bottom: 0;
-    padding:8px 0 8px 0;
+  color: #fbfbfb;
+  font-size: 96px;
+  line-height: 96px;
+  font-weight: 700;
+  margin-bottom: 0;
+  padding: 8px 0 8px 0;
 }
 
 .header span {
-    color:#F3F3F3 ;
-    position: relative;
-    gap:3px;
-    font-weight: 700;
-    font-size: smaller;
-    
-   
+  color: #f3f3f3;
+  position: relative;
+  gap: 3px;
+  font-weight: 700;
+  font-size: smaller;
 }
 .header svg {
-    position: relative;
-    z-index: 99;
-    
+  position: relative;
+  z-index: 99;
 }
 
 .white-verified-bg {
-    position: absolute;
-    top: 3px;
-    left: 5px;
-    content: "";
-    height: 16px;
-    width: 16px;
-    background-color: #fff;
-    border-radius: 50%;
-    z-index: 15;
-    
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  content: "";
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 15;
 }
 
 .header p {
-    color: var(--commonText);
-    font-weight: 600;
-    margin-bottom: 0;
-    margin-top:8px;
+  color: var(--commonText);
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 8px;
 }
 
 .main-content {
-    position:absolute;
-    left:240px;
-    width:calc(100% - var(--sideBarWidth));
-    
+  position: absolute;
+  left: 240px;
+  width: calc(100% - var(--sideBarWidth));
 }
 
 .songs-container {
-    background: linear-gradient(180deg, rgb(81,81,81) 0%, rgb(18,18,18) 42%, rgba(0,0,0,1) 100%);
-    height: calc(100% - 416px);
-    
+  background: linear-gradient(
+    180deg,
+    rgb(81, 81, 81) 0%,
+    rgb(18, 18, 18) 42%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  height: calc(100% - 416px);
 }
 .songs-controls {
-    gap: 30px;
-    padding: 24px 32px 24px 32px;
-
+  gap: 30px;
+  padding: 24px 32px 24px 32px;
 }
 #songs-ol li {
-    color: rgb(250,250,250);
-    font-size: medium;
-    font-weight: 700;
+  color: rgb(250, 250, 250);
+  font-size: medium;
+  font-weight: 700;
 }
 
 .green-play-btn {
-    height: 62px;
-    width: 62px;
-    min-width: 62px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:#1ed760 ;
-    border-radius: 50%;
-  }
+  height: 62px;
+  width: 62px;
+  min-width: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1ed760;
+  border-radius: 50%;
+}
 
-  .follow-btn {
-      background-color:transparent ;
-      border: 1px solid #9F9F9F;
-      height: 30px;
-      border-radius: 5px;
-      color: var(--commonText);
-      padding: 7px 15px 10px 15px;
-      font-size: smaller;
-      font-weight: 700;
-      
-  }
-  .songs-section {
-      padding: 0 32px 0 32px
-  }
-  .songs-section h4 {
-      font-weight: 700;
-     font-size: 22px;
-      color:#fff;
-      margin-bottom: 25px;
+.follow-btn {
+  background-color: transparent;
+  border: 1px solid #9f9f9f;
+  height: 30px;
+  border-radius: 5px;
+  color: var(--commonText);
+  padding: 7px 15px 10px 15px;
+  font-size: smaller;
+  font-weight: 700;
+}
+.songs-section {
+  padding: 0 32px 0 32px;
+}
+.songs-section h4 {
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 25px;
+}
 
-  }
+.more-btn {
+  background-color: transparent;
 
-  .more-btn {
-    background-color:transparent ;
-   
-    height: 30px;
-    border-radius: 5px;
-    color: var(--commonText);
-    padding: 7px 15px 7px 15px;
-    font-size: small;
-    font-weight: 700;
-    border: none;
-  }
+  height: 30px;
+  border-radius: 5px;
+  color: var(--commonText);
+  padding: 7px 15px 7px 15px;
+  font-size: small;
+  font-weight: 700;
+  border: none;
+}
 
-  .popular-releases-container h4 {
-    font-weight: 700;
-    font-size: 22px;
-     color:#fff;
-     margin-bottom: 25px;
-  }
+.popular-releases-container h4 {
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 25px;
+}
 
-  .listens,.time {
-    font-weight: 700;
-    font-size: medium;
-    color:rgb(170,170,170)
-  }
+.listens,
+.time {
+  font-weight: 700;
+  font-size: medium;
+  color: rgb(170, 170, 170);
+}
 
-  .popular-releases-container {
-    padding-left: 32px;
-    margin-top: 60px;
-  }
-  
-  .gap-10 {
-      gap: 250px;
-  }
+.popular-releases-container {
+  padding-left: 32px;
+  margin-top: 60px;
+}
+
+.gap-10 {
+  gap: 250px;
+}
