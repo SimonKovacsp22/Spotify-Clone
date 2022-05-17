@@ -20,18 +20,6 @@ function scrollNavbar() {
 //-----------------------------------------------------
 
 // Fetch API link-------------------------------------
-// const options = {
-//   method: "GET",
-//   headers: {
-//     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-//     "X-RapidAPI-Key": "8680b311b0mshfa595d3b50bced8p16d6f0jsnfe6371eab6a7",
-//   },
-// }
-
-// fetch("https://deezerdevs-deezer.p.rapidapi.com/album/%7Bid%7D", options)
-//   .then((response) => response.json())
-//   .then((response) => console.log(response))
-//   .catch((err) => console.error(err))
 const options = {
   method: "GET",
   headers: {
@@ -39,35 +27,39 @@ const options = {
     "X-RapidAPI-Key": "8680b311b0mshfa595d3b50bced8p16d6f0jsnfe6371eab6a7",
   },
 }
+
+//   .then((response) => response.json())
+//   .then((response) => console.log(response))
+//   .catch((err) => console.error(err))
+
 let artistContainer = document.querySelector(".artist-container")
 let headerCardContainer = document.querySelector(".header-card-container")
 function searchTitle() {
-  try {
-  } catch (error) {}
   let textInput = document.querySelector("#textInput").value
-  let best = "best"
+  let best = "eminem"
   if (textInput === "") {
     textInput = best
-
     fetch(
-      `https://striveschool-api.herokuapp.com/api/deezer/search?q=${textInput}`,
+      `https://deezerdevs-deezer.p.rapidapi.com/search?q=${textInput}`,
       options
     )
       .then((data) => data.json())
-      .then((data) => {
-        //console.log(data)
-        return data
-      })
-      .then((songs) => {
-        // console.log(songs.data);
-        for (let i = 0; i < songs.data.length; i++) {
-          let image = songs.data[i].md5_image
-          let title = songs.data[i].title
-          let albumId = songs.data[i].id
+      // .then((data) => {
+      //   console.log(data)
+      //   return data
+      // })
+      .then((album) => {
+        // console.log(album.data);
+        for (let i = 0; i < album.data.length; i++) {
+          let image = album.data[i].md5_image
+          let title = album.data[i].title
+          let albumId = album.data[i].album.id
+          let albumName = album.data[i].album.title
+          console.log(albumName)
           console.log(albumId)
-          // songsArr.push(title)
-          let duration = songs.data[i].duration
-          let artist = songs.data[i].artist.name
+          // albumArr.push(title)
+          let duration = album.data[i].duration
+          let artist = album.data[i].artist.name
           artistContainer.innerHTML += `   
                 <div class="card artist-card p-1 mb-1">
                   <img
@@ -76,7 +68,7 @@ function searchTitle() {
                     alt="..."
                   />
                   <div class="card-body artist-card-body p-1">
-                    <h6 class="card-title">${title}</h6>
+                    <h6 class="card-title">${albumName}</h6>
                     <p class="card-text">${artist}</p>
                     <small class="card-text">${duration}</small>
                     
