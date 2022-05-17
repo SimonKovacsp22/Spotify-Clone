@@ -4,7 +4,8 @@
 }
 .main-content-container  {
     height: 100vh;
-    background-color: darkblue; 
+    background-repeat: no-repeat;
+    background-size: cover;
       
 }
 
