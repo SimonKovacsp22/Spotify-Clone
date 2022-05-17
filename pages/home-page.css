@@ -70,6 +70,7 @@ h6 {
 }
 /* main container right----------- */
 .main-container-right {
+  position: absolute;
   margin-left: 240px;
   width: calc(100% - 240px);
   /* --bs-gutter-x: none; */
@@ -91,16 +92,26 @@ h6 {
   background-color: #121212fd;
   transition: 0.5s ease-in;
 }
-.arrow-left,
+.arrow-left {
+  background-color: #00000069;
+  border-radius: 50%;
+  height: 35px;
+  cursor: pointer;
+  color: rgb(209, 210, 212);
+  font-size: 20px;
+  padding: 5px;
+}
 .arrow-right {
   background-color: #00000069;
   border-radius: 50%;
-  height: 40px;
+  height: 35px;
   cursor: pointer;
   color: rgb(209, 210, 212);
+  font-size: 20px;
+  padding: 5px;
 }
-.arrow-left {
-  margin-left: 20px;
+input {
+  border: none;
 }
 .profile {
   position: relative;
@@ -158,7 +169,7 @@ h6 {
   cursor: pointer;
 }
 .header-card-img {
-  min-height: 65px;
+  max-height: 65px;
   object-fit: cover;
 }
 .header-card-body {
