@@ -73,7 +73,7 @@ function searchTitle() {
                     <small class="card-text">${duration}</small>
                     
                     <a href="./Artist.html?artist=${artist}">artist</a>
-                    <a href="./Album.html?=${albumId}">
+                    <a href="./album-page.html?=${albumId}">
                     <i class="bi bi-play-circle-fill play-button-img"></i>
                     </a>
                   </div>
