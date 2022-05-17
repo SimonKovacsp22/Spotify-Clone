@@ -1,6 +1,6 @@
 :root{
     --commonText:#e3e3e3;
-    --sideBarWidth:220px;
+    --sideBarWidth:240px;
 }
 .main-content-container  {
     height: 100vh;
@@ -40,7 +40,7 @@
 }
 
 .white-verified-bg {
-    position: absolute;
+    
     top: 5px;
     left: 3px;
     content: "";
@@ -60,7 +60,8 @@
 }
 
 .main-content {
-    
+    position:absolute;
+    left:240px;
     width:calc(100% - var(--sideBarWidth));
     
 }
