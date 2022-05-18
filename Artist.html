@@ -58,7 +58,7 @@
               <div class="main-content  position-relative pl-5" >
                 <div class="header d-flex flex-column justify-content-end ">
                    
-                    <span class="d-flex"> 
+                    <span class="d-flex align-items-center"> 
                       <div class="white-verified-bg"></div>
                       <svg role="img" height="24" width="24" fill="#3074CF" viewBox="0 0 24 24"><path d="M10.814.5a1.658 1.658 0 012.372 0l2.512 2.572 3.595-.043a1.658 1.658 0 011.678 1.678l-.043 3.595 2.572 2.512c.667.65.667 1.722 0 2.372l-2.572 2.512.043 3.595a1.658 1.658 0 01-1.678 1.678l-3.595-.043-2.512 2.572a1.658 1.658 0 01-2.372 0l-2.512-2.572-3.595.043a1.658 1.658 0 01-1.678-1.678l.043-3.595L.5 13.186a1.658 1.658 0 010-2.372l2.572-2.512-.043-3.595a1.658 1.658 0 011.678-1.678l3.595.043L10.814.5zm6.584 9.12a1 1 0 00-1.414-1.413l-6.011 6.01-1.894-1.893a1 1 0 00-1.414 1.414l3.308 3.308 7.425-7.425z"></path>
                     </svg> Verified Artist</span> 
@@ -79,17 +79,40 @@
                    
                      </div>
                      <div class="songs-section">
-                       <h4>Popular</h4>
-                       <div class="songs-list ">
-                       <div class="d-flex ">
-                         <ol id="songs-ol">
-                         </ol>
+                       
+                      
+                       <div class=" songs-list d-flex ">
+                         <div>
+                           <h4>Popular</h4>
+                           <ol id="songs-ol">
+                           </ol>
+                           <button class="more-btn d-flex align-items-center">SEE MORE</button>
+                         </div>
                          
-                         <div class="artist-pick d-flex ">
-                        
-                        </div>
+                       
+                         
+                           <div class=" artist-pick">
+                             <h4>Artist pick</h4>
+                             <div class=" d-flex ">
+                               
+                             <img id="artist-pick-img"/>
+                             <div id="artist-pick-info" class=" d-flex flex-column ">
+                                 <div class="d-flex align-items-center">
+                                   <img id="artist-pick-img-rounded-small"/>
+                                   <p id="artist-posted-by">Posted By </p>
+                                 </div>
+    
+                               
+                               <h6 id="artist-pick-bestof"> </h6>
+                               <p>
+                                 Playlist
+                               </p>
+                             </div>
+                            </div>
+                           </div>
+                       
                        </div>
-                      <button class="more-btn d-flex align-items-center">SEE MORE</button>
+                      
                      
                        </div>
                        
