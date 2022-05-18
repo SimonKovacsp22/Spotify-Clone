@@ -8,6 +8,7 @@
   );
   margin-left: 240px;
   width: calc(100% - 240px);
+  min-height: 100vh;
 }
 
 .trasparentDark {

@@ -46,68 +46,6 @@
     </div>
     <div class="backgroundColor p-0">
       <div class="col-12 p-0">
-        <!-- <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#"
-                    >Home <span class="sr-only">(current)</span></a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled">Disabled</a>
-                </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input
-                  class="form-control mr-sm-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button
-                  class="btn btn-outline-success my-2 my-sm-0"
-                  type="submit"
-                >
-                  Search
-                </button>
-              </form>
-            </div>
-          </nav> -->
         <div class="m-auto d-flex col-11 justify-content-between align-items-center nav-top p-0">
           <div class="control-arrow col-6">
             <img class="arrow-left p-1" src="./asset/chevron-left.svg" alt="" />
@@ -258,12 +196,15 @@
     }
   </script>
   <script>
-    window.onload = () =>{
+    let api = "https://striveschool-api.herokuapp.com/api/deezer/album"
+    let endPoint = new URLSearchParams(window.location.search).get("id");
+    let url = api + "/" + endPoint
+    window.onload = () => {
       musicFetch();
     }
     const musicFetch = async () => {
       try {
-        const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062");
+        const response = await fetch(url);
         const musics = await response.json();
         console.log(musics);
         renderAlbum(musics);
@@ -273,8 +214,8 @@
       }
     };
     const renderAlbum = (obj) => {
-      let durationHr = Math.floor(obj.duration/3600);
-      let durationMin = Math.floor(obj.duration%3600/60);
+      let durationHr = Math.floor(obj.duration / 3600);
+      let durationMin = Math.floor(obj.duration % 3600 / 60);
       let album = document.querySelector('.albumContainer');
       album.innerHTML = `  <div class="col-xl-2 col-lg-2 col-12 pr-0 ml-xl-3 ml-md-0">
           <img src="${obj.cover}" class="rounded w-100 shadow-lg" alt="..." />
@@ -284,40 +225,32 @@
           <h3 class="text-white align-self-end lineHeight">
             ${obj.title}
           </h3>
-          <p class="small text-white mb-1">
+          <p class="small text-white mb-1"><a href="./Artist.html?artist=${obj.artist.name}">
             <img src="${obj.artist.picture_xl}" alt=""
-              style="border-radius: 50%" width="20" class="mr-1" />${obj.artist.name}
+              style="border-radius: 50%" width="20" class="mr-1" />${obj.artist.name}</a>
             <span class="text-white-50"> - ${obj.release_date} - ${obj.nb_tracks} songs, ${durationHr}hr ${durationMin}min </span>
           </p>
         </div>`
     };
-    const renderTracks = (obj) =>{
+    const renderTracks = (obj) => {
       let musicContainer = document.querySelector("tbody");
       let tracksCon = obj.tracks.data;
       let counter = 0;
       console.log(tracksCon);
       for (let i = 0; i < tracksCon.length; i++) {
         const track = tracksCon[i];
-        let durationMin = Math.floor(track.duration/60).toString()
-        let durationSec =  "0" +Math.floor(track.duration%60).toString();
-        counter= counter + 1;
-        // musicContainer.innerHTML = `<tr class="d-flex justify-content-between hoverIt">
-                // <th scope="row" class="text-white-50">
-                //   <span class="numberHover">1</span><i class="bi bi-play"></i><span
-                //     class="ml-4 text-white makeSmaller">20th Century fox Fanfare</span><br />
-                //   <small class="text-white-50 margins"><b>Queen</b></small>
-                // </th>
-                // <td class="text-white-50">4:00</td>
-        //       </tr>`
+        let durationMin = Math.floor(track.duration / 60).toString()
+        let durationSec = "0" + Math.floor(track.duration % 60).toString();
+        counter = counter + 1;
         let tr = document.createElement("tr");
         tr.className = "d-flex justify-content-between hoverIt"
         tr.innerHTML = `<th scope="row" class="text-white-50">
-                  <span class="numberHover">${counter}</span><i class="bi bi-play"></i><span
-                    class="ml-4 text-white makeSmaller">${track.title}</span><br />
-                  <small class="text-white-50 margins"><b>${track.artist.name}</b></small>
+                  <span class="numberHover mr-4">${counter}</span><i class="bi bi-play"></i><span
+                    class=" text-white makeSmaller">${track.title}</span>
+                  <small class="text-white-50 margins d-block"><b>${track.artist.name}</b></small>
                 </th>
-                <td class="text-white-50">${durationMin.substring(durationMin.length-2, durationMin.length)}:${durationSec.substring(durationSec.length-2, durationSec.length)}</td>`
-                musicContainer.appendChild(tr);
+                <td class="text-white-50">${durationMin.substring(durationMin.length - 2, durationMin.length)}:${durationSec.substring(durationSec.length - 2, durationSec.length)}</td>`
+        musicContainer.appendChild(tr);
       }
     };
   </script>
