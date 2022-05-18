@@ -3,25 +3,31 @@ let endPoint = new URLSearchParams(window.location.search).get("artist");
 let url = api + "/" + endPoint
 let songsOl = document.getElementById('songs-ol')
 let artistPickDivNode = document.querySelector('.artist-pick')
+let pageBgcontainer = document.querySelector('.main-content-container')
 const getArtist = async function (url) {
     const response = await fetch(url)
     const artist = await response.json()
-    const songs = artist.songs
+    // const songs = artist.songs
+   console.log(artist)
+   displaySongs(artist)
+   
    
     
 }
 
-const displaySongs = function (array){
+const displaySongs = function (artist){
    
-    array.forEach(element => {
-       let artistSongLiNode =document.createElement('li')
-       artistSongLiNode.innerHTML = `<img src="${element.img}"/>
-                                     <p>${element.name}</p>
-                                     <p class="listens">${element.listens}</p>
-                                     <p class="time">${element.duration}</p>`
+    
+    let artistSongLiNode =document.createElement('li')
+    artistSongLiNode.className = 'd-flex'
+    artistSongLiNode.innerHTML = `<img src="${artist.picture}"/>
+                                     <p>${artist.name}</p>
+                                     <p class="listens">${artist.nb_fan}</p>
+                                     <p class="time">${artist.duration}</p>`
                                      ;
-    });
     songsOl.appendChild(artistSongLiNode)
+    pageBgcontainer.style.backgroundImage = `url(${artist.picture_xl})`
+    
 }
 
 const displayArtistPick = function (object) {
