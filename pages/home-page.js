@@ -1,19 +1,19 @@
 const arrGenre = [
   "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
-  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://img.freepik.com/premium-vector/jazz-musical-instruments_81894-3155.jpg",
+  "https://direct.rhapsody.com/imageserver/images/alb.527221048/500x500.jpg",
+  "https://www.listenspotify.com/uploaded_files/Thf_1552155142.jpg",
+  "https://i.pinimg.com/736x/a3/03/02/a30302da6060b6bea4c2c58d36f0dd49.jpg",
+  "https://www.audiosparx.com/sa/zdbpath/catpix/dance-music-licensing.jpg",
+  "https://i1.sndcdn.com/artworks-gzlaaANDymmLwAho-orLezg-t500x500.jpg",
+  "https://www.cmuse.org/wp-content/uploads/2020/11/What-Makes-Classical-Music-Classical.jpg",
+  "https://www.radio.it/images/broadcasts/aa/d5/9148/1/c300.png",
+  "https://media-cdn.tripadvisor.com/media/photo-s/12/2b/80/c1/blues-cafe.jpg",
+  "https://static.roland.com/assets/images/products/main/rc_techno_main.jpg",
+  "https://i1.sndcdn.com/artworks-000604021894-uy96fq-t500x500.jpg",
+  "http://www.themusicblog.eu/wp-content/uploads/2013/12/reggae.jpg",
+  "https://image.spreadshirtmedia.net/image-server/v1/mp/products/T1459A842MPA4459PT28D148798419FS1458/views/1,width=550,height=550,appearanceId=842,backgroundColor=F2F2F2/soul-music-black-music-jazz-adesivo.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/DUBSTEP.jpg/220px-DUBSTEP.jpg",
 ]
 
 // Fetch API link-------------------------------------
@@ -37,7 +37,7 @@ function searchTitle() {
     artistContainer.innerHTML = ""
     let textInput = document.querySelector("#textInput").value
 
-    let query = textInput !== "" ? textInput : "eminem"
+    let query = textInput !== "" ? textInput : "best"
     fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${query}`, options)
       .then((data) => data.json())
       // .then((data) => {
@@ -110,22 +110,19 @@ function searchTitle() {
 }
 
 const searchBarShow = () => {
-  artistContainer.innerHTML = ""
+  //artistContainer.innerHTML = ""
   console.log("first")
   let searchbar = document.getElementById("searchBar")
+  let genreDiv = document.querySelector(".genreContainer")
   searchbar.classList.toggle("search-bar-show")
-  artistContainer.classList.toggle("search-bar-show")
+  //genreDiv.classList.toggle("search-bar-show")
 
-  try {
-    let textInput = document.querySelector("#textInput").value
-
-    for (let i = 0; i < arrGenre.length; i++) {
-      let genre = arrGenre[i]
-      artistContainer.innerHTML += `<div class="category m-2"><img class="musicGenres p-0" src="${genre}"</div>`
-    }
-  } catch (error) {
-    console.log(error)
-  }
+  // try {
+  //   for (let i = 0; i < arrGenre.length; i++) {
+  //     let genre = arrGenre[i]
+  //     genreDiv.innerHTML += `<div class="category m-2"><img class="musicGenres  p-0" src="${genre}"/></div>`
+  //   }
+  // } catch (error) {
+  //   console.log(error)
+  // }
 }
-
-searchTitle()

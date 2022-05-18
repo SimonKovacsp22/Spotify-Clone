@@ -1,5 +1,6 @@
 .navbar {
   width: 100%;
+  min-width: 450px;
   height: 12vh;
   text-align: center;
   border-bottom: 0.3px solid gray;
@@ -9,7 +10,7 @@
   margin: auto;
 }
 .content-div {
-  max-width: 450px;
+  min-width: 450px;
   width: 100%;
 }
 .facebook {
@@ -64,6 +65,12 @@
   transition: 0.2s ease-in-out;
   color: rgb(20, 20, 20);
   background-color: #1ed760;
+  border: none;
+  box-shadow: none;
+}
+.btn-success:focus {
+  border: 3px solid black;
+  box-shadow: none;
 }
 .sportfy {
   min-width: 100%;
@@ -82,6 +89,13 @@
 .google,
 .sportfy {
   padding: 10px 0;
+}
+.apple:focus,
+.facebook:focus,
+.google:focus,
+.sportfy:focus {
+  border: 3px solid black;
+  box-shadow: none;
 }
 .input {
   height: 50px;

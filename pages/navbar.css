@@ -63,9 +63,3 @@ input {
 .dropdown-item:hover {
   background-color: #141414;
 }
-.search-bar-hidden {
-  opacity: 0;
-}
-.search-bar-show {
-  opacity: 1;
-}
