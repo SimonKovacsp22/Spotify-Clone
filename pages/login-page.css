@@ -9,8 +9,8 @@
   margin: auto;
 }
 .content-div {
-  min-width: 500px;
-  width: 500px;
+  max-width: 450px;
+  width: 100%;
 }
 .facebook {
   background-color: #3b5998;
@@ -50,11 +50,20 @@
   background-color: #747474;
 }
 .btn-success {
-  padding: 10px 30px;
-  color: black;
+  padding: 14px 34px;
+  color: rgb(57, 57, 57);
   font-size: 15px;
   font-weight: bold;
   letter-spacing: 2px;
+  background-color: #1ed760;
+  border: none;
+}
+.btn-success:hover {
+  transform: scale(105%);
+  /* padding: 15px 36px; */
+  transition: 0.2s ease-in-out;
+  color: rgb(20, 20, 20);
+  background-color: #1ed760;
 }
 .sportfy {
   min-width: 100%;
@@ -66,4 +75,25 @@
 .sportfy:hover {
   border: 1px solid rgb(106, 106, 106);
   color: black;
+}
+
+.apple,
+.facebook,
+.google,
+.sportfy {
+  padding: 10px 0;
+}
+.input {
+  height: 50px;
+}
+.input:focus {
+  outline: #800000;
+  border: 3px solid black;
+  box-shadow: none;
+}
+
+.checkBox:focus {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #800000;
 }
