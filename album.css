@@ -10,7 +10,10 @@
   width: calc(100% - 240px);
   min-height: 100vh;
 }
-
+.linkDis{
+  text-decoration: none;
+  color: whitesmoke;
+}
 .trasparentDark {
   background-color: rgb(0, 0, 0, 0.3);
 }
