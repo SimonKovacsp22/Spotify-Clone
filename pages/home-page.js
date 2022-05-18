@@ -1,3 +1,21 @@
+const arrGenre = [
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+  "https://m.media-amazon.com/images/I/91KlSJe+D9L._SS500_.jpg",
+]
+
 // Fetch API link-------------------------------------
 const options = {
   method: "GET",
@@ -13,33 +31,35 @@ const options = {
 
 let artistContainer = document.querySelector(".artist-container")
 let headerCardContainer = document.querySelector(".header-card-container")
+let featureDiv = document.querySelector(".feature-div")
 function searchTitle() {
-  artistContainer.innerHTML = ""
-  let textInput = document.querySelector("#textInput").value
+  try {
+    artistContainer.innerHTML = ""
+    let textInput = document.querySelector("#textInput").value
 
-  let query = textInput !== "" ? textInput : "eminem"
+    let query = textInput !== "" ? textInput : "eminem"
+    fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${query}`, options)
+      .then((data) => data.json())
+      // .then((data) => {
+      //   console.log(data)
+      //   return data
+      // })
+      .then((album) => {
+        // console.log(album.data);
 
-  fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${query}`, options)
-    .then((data) => data.json())
-    // .then((data) => {
-    //   console.log(data)
-    //   return data
-    // })
-    .then((album) => {
-      // console.log(album.data);
-
-      for (let i = 0; i < album.data.length; i++) {
-        let image = album.data[i].album.cover
-        let title = album.data[i].title_short
-        let albumId = album.data[i].album.id
-        let albumName = album.data[i].album.title
-        console.log(albumName)
-        console.log(albumId)
-        // albumArr.push(title)
-        let duration = album.data[i].duration
-        let artist = album.data[i].artist.name
-        artistContainer.innerHTML += `   
-                <div class="card artist-card p-1 mb-1">
+        for (let i = 0; i < album.data.length; i++) {
+          let image = album.data[i].album.cover
+          let title = album.data[i].title_short
+          let albumId = album.data[i].album.id
+          let albumName = album.data[i].album.title
+          let track = album.data[i].preview
+          // console.log(track)
+          // console.log(albumId)
+          // albumArr.push(title)
+          let duration = album.data[i].duration
+          let artist = album.data[i].artist.name
+          artistContainer.innerHTML += `   
+                <div class="card artist-card p-3 mb-1">
                   <img
                     src=${image}
                     class="card-img-top artist-card-img"
@@ -56,7 +76,7 @@ function searchTitle() {
                     </a>
                   </div>
                 </div>`
-        headerCardContainer.innerHTML += `
+          headerCardContainer.innerHTML += `
                 <div class="card col-2 mb-3 header-card">
                     <div class="row g-0">
                       <div class="col-4">
@@ -78,10 +98,34 @@ function searchTitle() {
                       </div>
                     </div>
                   </div>`
-      }
-    })
-    .catch((err) => console.error(err))
+          featureDiv.innerHTML += `
+                    <a class="feature-item my-1">${title}</a>`
+        }
+      })
+  } catch (error) {
+    console.log(error)
+  }
+
   document.querySelector("#textInput").value = ""
 }
 
-//searchTitle()
+const searchBarShow = () => {
+  artistContainer.innerHTML = ""
+  console.log("first")
+  let searchbar = document.getElementById("searchBar")
+  searchbar.classList.toggle("search-bar-show")
+  artistContainer.classList.toggle("search-bar-show")
+
+  try {
+    let textInput = document.querySelector("#textInput").value
+
+    for (let i = 0; i < arrGenre.length; i++) {
+      let genre = arrGenre[i]
+      artistContainer.innerHTML += `<div class="category m-2"><img class="musicGenres p-0" src="${genre}"</div>`
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+searchTitle()

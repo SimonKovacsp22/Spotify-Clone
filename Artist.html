@@ -14,35 +14,38 @@
       <div  class="container-fluid main-content-container d-flex px-0">
           
         <div class="sidebar">
-          <div class="sidebar-top d-flex flex-column">
-            <div class="logo">
-              <a href="#">
-                <img id="logo" src="./asset/Spotify_Logo.png" alt=""
-              /></a>
-            </div>
-            <div class="sidebar-link d-flex flex-column py-3">
-              <a class="sidebar-item"
-                ><i class="bi bi-house-door-fill sidebar-item-img"></i>Home</a
-              >
-              <a class="sidebar-item"
-                ><i class="bi bi-search sidebar-item-img"></i>Search</a
-              >
-              <a class="sidebar-item"
-                ><i class="bi bi-music-note-list sidebar-item-img"></i>Your
-                Library</a
-              >
-            </div>
-            <div class="song-action sidebar-link d-flex flex-column">
-              <a class="sidebar-item"
-                ><i class="bi bi-plus-square-fill sidebar-item-img"></i>Create
-                Playlist</a
-              >
-              <a class="sidebar-item"
-                ><i class="bi bi-chat-square-heart sidebar-item-img"></i>Liked
-                Songs</a
-              >
-            </div>
+            <div class="sidebar-top d-flex flex-column">
+          <div class="logo">
+            <a href="#"
+              ><img id="logo" src="./asset/Spotify_Logo.png" alt=""
+            /></a>
           </div>
+          <div class="sidebar-link d-flex flex-column py-3">
+            <a href="./home-page.html" class="sidebar-item"
+              ><i class="bi bi-house-door-fill sidebar-item-img"></i><span>Home</span></a
+            >
+            <a onclick="searchBarShow()" id="searchBarShow" class="sidebar-item">
+      
+                 <i  class="bi bi-search sidebar-item-img"></i><span>Search</span>
+                
+                </a>
+        
+            </a>
+            <a class="sidebar-item"
+              ><i class="bi bi-music-note-list sidebar-item-img"></i><span>Your
+              Library</span></a
+            >
+          </div>
+          <div class="song-action sidebar-link d-flex flex-column">
+            <a class="sidebar-item"
+              ><i class="bi bi-plus-square-fill sidebar-item-img"></i><span>Create
+              Playlist</span></a
+            >
+            <a class="sidebar-item "
+              ><img class="sidebar-item-img mx-2" src="./asset/heart-icon.svg">
+              <span class="mx-1">Liked Songs</span></a>
+          </div>
+        </div>
           <div class="sidebar-bottom mt-2">
             <div class="feature-div d-flex flex-column">
               <a class="feature-item my-1">Liked Songs fgfg</a>

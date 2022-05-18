@@ -1,28 +1,28 @@
 :root {
-    --playbarbg:#181818;
-    --pbtextColor:#DFD3D5;
-    --pbbgColor:#515151;
-    --pbBorder:#252525;
-    
+  --playbarbg: #181818;
+  --pbtextColor: #dfd3d5;
+  --pbbgColor: #515151;
+  --pbBorder: #252525;
 }
 
 #pb-container-fluid > div {
-    padding-top: 13px
+  padding-top: 13px;
 }
 
 .playbar {
-    height: 90px;
-    background-color: var(--playbarbg);
-    color:var(--pbtextColor);
-    position:fixed;
-    bottom:0;
-    border: 1px solid var(--pbBorder);
-      
+  position: fixed;
+  left: 0;
+  height: 90px;
+  background-color: var(--playbarbg);
+  color: var(--pbtextColor);
+  position: fixed;
+  bottom: 0;
+  border: 1px solid var(--pbBorder);
 }
 
 .middle-section {
-    min-width: 200px;
-    gap: 5px;
+  min-width: 200px;
+  gap: 5px;
 }
 
 .play-btn {
@@ -31,55 +31,51 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:#FFFFFF ;
+  background-color: #ffffff;
   border-radius: 50%;
 }
 
 .control-btn {
-    width: 32px;
-    height: 32px;
-    background-color: var(--playbarbg);
+  width: 32px;
+  height: 32px;
+  background-color: var(--playbarbg);
 }
 .control-btn-right {
-    display: flex;
-    justify-content: end;
-    align-items: center;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .control-btn-left {
-    display: flex;
-    justify-content: s;
-    align-items: center;
+  display: flex;
+  justify-content: s;
+  align-items: center;
 }
 
 .progress-bar {
-    height: 5px;
-    background-color: var(--pbbgColor);
-    border-radius: 2px;
-    width: 80%;
+  height: 5px;
+  background-color: var(--pbbgColor);
+  border-radius: 2px;
+  width: 80%;
 }
 
 .volume-bar {
-    height: 5px;
-    background-color: var(--pbtextColor);
-    border-radius: 2px;
-    width: 90px;
+  height: 5px;
+  background-color: var(--pbtextColor);
+  border-radius: 2px;
+  width: 90px;
 }
 
-#pb-container-fluid >div>div>div>p:nth-child(2),.middle-section>div:nth-child(2) p {
-   font-size: 10px;
+#pb-container-fluid > div > div > div > p:nth-child(2),
+.middle-section > div:nth-child(2) p {
+  font-size: 10px;
 }
 
 #pb-song-title {
-font-weight: 700;
-font-size: small;
+  font-weight: 700;
+  font-size: small;
 }
 
-.middle-section >div {
-    gap:6px
+.middle-section > div {
+  gap: 6px;
 }
-
-
-
-
-
