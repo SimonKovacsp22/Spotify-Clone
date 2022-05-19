@@ -70,7 +70,7 @@
 
 .songs-container {
     background: linear-gradient(180deg, rgb(81,81,81) 0%, rgb(18,18,18) 42%, rgba(0,0,0,1) 100%);
-    height: calc(100% - 416px);
+    height: calc(120vh - 416px);
     
 }
 .songs-controls {
@@ -88,6 +88,7 @@
     height: 62px;
     width: 62px;
     min-width: 62px;
+    margin: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,6 +107,17 @@
       font-weight: 700;
       
   }
+
+  .follow-btn-green {
+    background-color: #1ed760;
+    border: 1px solid black;
+    color: black;
+    height: 30px;
+    border-radius: 5px;
+    padding: 7px 15px 10px 15px;
+    font-size: smaller;
+    font-weight: 700;
+  }
   .songs-section {
       padding: 0 32px 0 32px
   }
@@ -116,6 +128,9 @@
       color:#fff;
       margin-bottom: 25px;
 
+  }
+  .songs-list {
+      margin-right: 100px;
   }
 
 
@@ -183,8 +198,30 @@
       margin-left: 3px;
       margin-bottom: 0;
   }
+
+  #pb-img-left {
+      height: 64px;
+      width: 64px;
+  }
+
+  #album-pic-big {
+      height: 200;
+      width:200;
+      bottom:50px;
+      right: 40px;
+      border-radius: 10px;
+  }
+
+  #three-dots-svg:hover {
+     fill:white
+  }
+
 .gap-10 {
       gap: 250px;
+}
+
+.gap-6 {
+     gap: 100px
 }
 
 .flew-grow-1 {
@@ -212,6 +249,34 @@ li div:nth-child(1) p {
     margin-right: 15px
 }
 
+.fill-white {
+    fill:white
+}
+
+.songs-section li:hover{
+    background-color: rgba(255,255,255,.3);
+}
+
+.follow-btn:hover {
+    border-color:white;
+    color:white;
+}
+
+.already-green:hover{
+    fill:white
+}
+
+.green-play-btn:hover {
+    margin: 0px;
+    height: 66px;
+    width: 66px;
+
+}
+.green-play-btn:hover .white-triangle {
+            height: 26px ;
+            width: 26px;
+
+}
 @media (max-width: 1450px) {
     .gap-10 {
         gap: 150px
@@ -230,6 +295,9 @@ li div:nth-child(1) p {
     .gap-10 {
         gap: 50px
     }
+    .gap-6 {
+        gap: 50px
+    }
     
  }
 
@@ -237,6 +305,9 @@ li div:nth-child(1) p {
      
    
         .gap-10 {
+            gap:10px
+        }
+        .gap-6 {
             gap:10px
         }
      
@@ -266,7 +337,5 @@ li div:nth-child(1) p {
      .gap-10{
          gap: 300px
      }
-     .songs-list {
-         gap: 200px
-     }
+   
  }

@@ -2,34 +2,26 @@ let api = "https://striveschool-api.herokuapp.com/api/deezer/artist"
 let endPoint = new URLSearchParams(window.location.search).get("artist");
 let url = api + "/" + 'sia'
 
+
 let songsOl = document.getElementById('songs-ol')
 let artistPickDivNode = document.querySelector('.artist-pick')
 let pageBgcontainer = document.querySelector('.header')
+let pbSvgs = document.querySelectorAll('.playbar svg')
+let allLiWithSongs = document.querySelectorAll('.songs-section li')
+let followBtn = document.querySelector('.follow-btn')
 
 const getArtist = async function (url) {
     const response = await fetch(url)
     const artist = await response.json()
-    // const songs = artist.songs
    console.log(artist)
-
-   let tracklistUrl = artist.tracklist
-   let tracks = await getTracklist(tracklistUrl)
-   displaySongs(artist,tracks)
-   displayArtistPick(artist,tracks[2].album)
-   
-   
-   
-   
-   
-    
+   return artist  
 }
 
 const displaySongs = function (artist,tracklist){
    
     tracklist.forEach(track => {
         let artistSongLiNode =document.createElement('li')
-        artistSongLiNode.className = 'd-flex align-items-center pb-3'
-        artistSongLiNode.classList.add('gap-10')
+        artistSongLiNode.className = 'd-flex align-items-center mb-2 gap-6 pb-3 pt-2 rounded'
         artistSongLiNode.innerHTML  = `   
                                          <div class='d-flex align-items-center'>
                                          <img id='track-image'style="width:40px; height: 40px"src="${track.album.cover_small}"/>
@@ -69,18 +61,93 @@ const displayArtistPick = function (artist,album) {
      artistPickBestOf.innerText = artist.name + " " + "Best Of"
      let artistH1 = document.getElementById('artist-name')
      artistH1.innerText = artist.name
-    
+     let pbImageLeft = document.getElementById('pb-img-left')
+     pbImageLeft.setAttribute('src',album.cover_medium)
+     pbArtistName = document.getElementById('pb-artist-name')
+     pbArtistName.innerText = artist.name
+     pbSongTitle = document.getElementById('pb-song-title')
+     pbSongTitle.innerText = album.title        
 }
 
 const getTracklist = async function (url) {
     const response = await fetch(url)
     const tracklist = await response.json()
-    // const songs = artist.songs
-   console.log(tracklist) 
-   console.log(tracklist.data[0].album)
+    console.log(tracklist.data[0])
    return tracklist.data
 }
 
-getArtist(url)
 
+
+const svgHover = function () {
+    pbSvgs.forEach(svg => {
+        svg.addEventListener('mouseover',() => {
+            svg.classList.add('fill-white')
+        })
+    svg.addEventListener('mouseout', ()=>{
+        svg.classList.remove('fill-white')
+    })
+    })
+}
+
+const fillHeartGreen =  function () {
+    let greenHeartFull = document.querySelector('.svg-heart-fill')
+    let heartEmpty = document.querySelector('.svg-heart-empty')
+    greenHeartFull.addEventListener('click',()=> {
+       heartEmpty.classList.remove ('d-none')
+       greenHeartFull.classList.add('d-none')
+    })
+    heartEmpty.addEventListener('click',()=>{
+       heartEmpty.classList.add('d-none')
+       greenHeartFull.classList.remove('d-none')
+    })
+}
+
+const makeAlbumPictureBigger = async function () {
+    let makeAlbumPicBigBtn = document.querySelector('#svg-make-album-img-big')
+    let AlbumPic = document.getElementById('album-pic-big')
+    let PicSrc = document.querySelector('#pb-img-left').src
+
+    makeAlbumPicBigBtn.addEventListener('click',()=> {
+        makeAlbumPicBigBtn.classList.toggle('already-green')
+        AlbumPic.setAttribute('src',PicSrc)
+        AlbumPic.classList.toggle('d-none')
+    })
+}
+
+window.onload = async function () {
+    await getArtist(url)
+    let artist = await getArtist(url)
+    console.log(artist)
+    let tracklistUrl = artist.tracklist
+   let tracks = await getTracklist(tracklistUrl)
+   displaySongs(artist,tracks)
+   displayArtistPick(artist,tracks[0].album)
+   svgHover()
+   fillHeartGreen()
+   makeAlbumPictureBigger()
+   changeSoundIcon()
+   handleFollowBtn()
+   
+}
+
+const changeSoundIcon =  function () {
+    let soundIcon = document.querySelector('.sound-icon')
+    let soundIconCrossed = document.querySelector('.sound-icon-crossed')
+    soundIconCrossed.addEventListener('click',()=> {
+       soundIcon.classList.remove ('d-none')
+       soundIconCrossed.classList.add('d-none')
+    })
+    soundIcon.addEventListener('click',()=>{
+       soundIcon.classList.add('d-none')
+       soundIconCrossed.classList.remove('d-none')
+    })
+}
+
+
+const handleFollowBtn = function () {
+  followBtn.addEventListener('click',()=> {
+      followBtn.classList.toggle('follow-btn-green')
+     
+  })
+}
 
