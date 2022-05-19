@@ -101,7 +101,7 @@
           </div>
         </div>
         <div class="col-12 d-flex">
-          <table class="table table-borderless text-white">
+          <table class="table table-borderless text-white mx-3">
             <thead>
               <tr class="border-bot d-flex justify-content-between">
                 <th scope="col" class="text-white-50">
@@ -221,15 +221,15 @@
       let durationHr = Math.floor(obj.duration / 3600);
       let durationMin = Math.floor(obj.duration % 3600 / 60);
       let album = document.querySelector('.albumContainer');
-      album.innerHTML = `  <div class="col-xl-2 col-lg-2 col-12 pr-0 ml-xl-3 ml-md-0 albumPicContainer">
-          <img src="${obj.cover_xl}" class="rounded w-100 shadow-lg" alt="..." />
+      album.innerHTML = `  <div class="col-xl-2 col-lg-2 col-12 pr-0 ml-lg-2 ml-md-0 albumPicContainer">
+          <img src="${obj.cover_xl}" class="rounded w-100 shadow-lg ml-lg-4 mt-5 ml-md-0" alt="..." />
         </div>
-        <div class="col-9 mt-xl-auto mt-lg-auto mt-2 mt-md-3">
+        <div class="col-9 mt-xl-auto mt-lg-auto mt-2 mt-md-3 ml-3 ml-md-4">
           <h6 class="text-white">Album</h6>
           <h3 class="text-white align-self-end lineHeight">
             ${obj.title}
           </h3>
-          <p class="small text-white mb-1"><a class="linkDis" href="./Artist.html?artist=${obj.artist.name}">
+          <p class="small text-white mb-1 align-self-center"><a class="linkDis" href="./Artist.html?artist=${obj.artist.name}">
             <img src="${obj.artist.picture_xl}" alt=""
               style="border-radius: 50%" width="20" class="mr-1" />${obj.artist.name}</a>
             <span class="text-white-50"> - ${obj.release_date} - ${obj.nb_tracks} songs, ${durationHr}hr ${durationMin}min </span>
@@ -239,7 +239,7 @@
     const renderTracks = (obj) => {
       let musicContainer = document.querySelector("tbody");
       let tracksCon = obj.tracks.data;
-      let counter = 0;
+      let counter = 00  ;
       console.log(tracksCon);
       for (let i = 0; i < tracksCon.length; i++) {
         const track = tracksCon[i];
@@ -251,8 +251,8 @@
         div.className = "musicContainers"
         tr.className = "d-flex justify-content-between hoverIt musicsInside"
         tr.innerHTML = `<th scope="row" class="text-white-50">
-                  <span class="numberHover mr-4">${counter}</span><i class="bi bi-play mr-4"></i><span
-                    class=" text-white makeSmaller">${track.title}</span>
+                  <span class="numberHover">${counter}</span><i class="bi bi-play mr-4"></i><span
+                    class=" text-white makeSmaller ml-4">${track.title}</span>
                   <small class="text-white-50 margins d-block"><b>${track.artist.name}</b></small>
                 </th>
                 <td class="text-white-50">${durationMin.substring(durationMin.length - 2, durationMin.length)}:${durationSec.substring(durationSec.length - 2, durationSec.length)}</td>`
