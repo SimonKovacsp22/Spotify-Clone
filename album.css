@@ -138,7 +138,7 @@ h6 {
   transition: 1s ease;
   text-decoration: none;
 }
-/* nav top--------------*/
+/* nav top-------------- */
 .nav-top {
   position: fixed;
   height: 10vh;
@@ -203,6 +203,34 @@ input {
 .dropdown-item:hover {
   background-color: #141414;
 }
+.log-in {
+  text-decoration: none;
+  color: rgb(226, 226, 226);
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  .profile {
+    width: 30px;
+    margin-right: 20px;
+  }
+  .dropdown {
+    width: 30px;
+  }
+  .dropdown button {
+    max-width: 30px;
+    display: none;
+  }
+  .arrow-left {
+    display: none;
+  }
+  .arrow-right {
+    display: none;
+  }
+  input {
+    width: 150px;
+  }
+}
+
 /* music-player bottom----------------- */
 .player {
   position: fixed;

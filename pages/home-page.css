@@ -191,7 +191,7 @@ body {
 
 /* category containers --------------*/
 .category {
-  min-width: 200px;
+  max-width: 200px;
   height: 200px;
   background-size: cover;
   cursor: pointer;

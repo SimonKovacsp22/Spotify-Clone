@@ -50,27 +50,30 @@
   width: 100%;
   background-color: #747474;
 }
-.btn-success {
+.logginBtn {
   padding: 14px 34px;
   color: rgb(57, 57, 57);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
-  letter-spacing: 2px;
+
   background-color: #1ed760;
   border: none;
+  border-radius: 40px;
 }
-.btn-success:hover {
+.logginBtn:hover {
   transform: scale(105%);
   /* padding: 15px 36px; */
   transition: 0.2s ease-in-out;
   color: rgb(20, 20, 20);
-  background-color: #1ed760;
+  /* background-color: #1ed760; */
   border: none;
   box-shadow: none;
 }
-.btn-success:focus {
-  border: 3px solid black;
+.logginBtn:focus {
+  transform: scale(100%);
   box-shadow: none;
+  color: black;
+  background-color: #1ed760;
 }
 .sportfy {
   min-width: 100%;

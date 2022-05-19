@@ -16,6 +16,11 @@ const arrGenre = [
   "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/DUBSTEP.jpg/220px-DUBSTEP.jpg",
 ]
 
+// get user details------------------------
+
+let user_id = new URLSearchParams(window.location.search).get("userId")
+console.log(user_id)
+
 // Fetch API link-------------------------------------
 const options = {
   method: "GET",
@@ -110,19 +115,52 @@ function searchTitle() {
 }
 
 const searchBarShow = () => {
-  //artistContainer.innerHTML = ""
+  artistContainer.innerHTML = ""
   console.log("first")
   let searchbar = document.getElementById("searchBar")
   let genreDiv = document.querySelector(".genreContainer")
-  searchbar.classList.toggle("search-bar-show")
-  //genreDiv.classList.toggle("search-bar-show")
+  searchbar.classList.add("search-bar-show")
+  artistContainer.classList.add("search-bar-show")
 
-  // try {
-  //   for (let i = 0; i < arrGenre.length; i++) {
-  //     let genre = arrGenre[i]
-  //     genreDiv.innerHTML += `<div class="category m-2"><img class="musicGenres  p-0" src="${genre}"/></div>`
-  //   }
-  // } catch (error) {
-  //   console.log(error)
-  // }
+  for (let i = 0; i < arrGenre.length; i++) {
+    let genre = arrGenre[i]
+    artistContainer.innerHTML += `<div class="category m-2"><img class="musicGenres  p-0" src="${genre}"/></div>`
+  }
 }
+//users details-------------------
+
+const users = [
+  {
+    userId: "011",
+    name: "Simon",
+    password: "123456",
+    avatar:
+      "https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg",
+  },
+  {
+    userId: "012",
+    name: "Farshad",
+    password: "123456",
+    avatar:
+      "https://nientepopcorn.b-cdn.net/persone-img/big/tom-hardy-2524.jpg",
+  },
+  {
+    userId: "013",
+    name: "Sidath",
+    password: "123456",
+    avatar:
+      "https://s3-eu-west-1.amazonaws.com/static.screenweek.it/artist/7370.jpg",
+  },
+]
+// Create user
+const userImg = document.querySelector(".profile-img")
+const userName = document.querySelector(".userName")
+// users.forEach(user => {
+//   user.userId=user_id
+// console.log(user.userId)
+
+// });
+const result = users.filter((user) => user.userId == user_id)
+console.log(result[0].name)
+userName.textContent = result[0].name
+userImg.src = result[0].avatar
