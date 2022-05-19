@@ -235,15 +235,38 @@ li div:nth-child(1) p {
 
  @media (max-width: 767.98px) { 
      
-    .song-rank-and-duration {
-        display: none !important;
+   
+        .gap-10 {
+            gap:10px
         }
      
  }
 
+ @media (max-width: 646px) { 
+     
+   
+    .song-rank-and-duration {
+        display: none !important;
+    }
+ 
+}
+
  @media (max-width: 1171.98px )
  {
-     .artist-pick{
-         margin-left:10px;
+    .songs-list {
+        flex-direction: column;
+    }
+    .artist-pick {
+        margin-left: 0%;
+    }
+ }
+
+ @media (min-width: 1599.8px )
+ {
+     .gap-10{
+         gap: 300px
+     }
+     .songs-list {
+         gap: 200px
      }
  }

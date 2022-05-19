@@ -67,6 +67,8 @@ const displayArtistPick = function (artist,album) {
      artistPickName.innerText += " " + artist.name
      let artistPickBestOf = document.getElementById('artist-pick-bestof')
      artistPickBestOf.innerText = artist.name + " " + "Best Of"
+     let artistH1 = document.getElementById('artist-name')
+     artistH1.innerText = artist.name
     
 }
 
