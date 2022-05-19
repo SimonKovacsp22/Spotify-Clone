@@ -69,9 +69,9 @@ body {
   min-width: 1200px;
 }
 .header-card-container2 {
-  height: 50vh;
   justify-content: space-between;
   min-width: 1200px;
+  margin-bottom: 20vh;
 }
 
 .header-card:hover {
