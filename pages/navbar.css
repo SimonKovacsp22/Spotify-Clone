@@ -1,32 +1,34 @@
 /* nav top-------------- */
 .nav-top {
   position: fixed;
-  height: 10vh;
+  height: 8vh;
   width: calc(100% - 240px);
   background-color: #12121251;
   z-index: 1;
 }
 .scroll {
   background-color: #121212fd;
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 }
 .arrow-left {
   background-color: #00000069;
   border-radius: 50%;
-  height: 35px;
+  height: 25px;
   cursor: pointer;
   color: rgb(209, 210, 212);
   font-size: 20px;
   padding: 5px;
+  margin-left: 20px;
 }
 .arrow-right {
   background-color: #00000069;
   border-radius: 50%;
-  height: 35px;
+  height: 25px;
   cursor: pointer;
   color: rgb(209, 210, 212);
   font-size: 20px;
   padding: 5px;
+  left: 20px;
 }
 input {
   border: none;
@@ -35,8 +37,8 @@ input {
   position: relative;
   justify-content: space-around;
   width: 170px;
+  height: 30px;
   background-color: #00000069;
-  padding: 3px;
   z-index: 2;
   right: 3%;
 }
@@ -44,7 +46,7 @@ input {
   width: 70%;
   background-color: transparent;
   color: rgb(209, 210, 212);
-  padding: 10px 0 10px 0;
+  padding: 5px 0 5px 0;
   margin-left: -5%;
 }
 .dropdown button:hover {
@@ -53,24 +55,26 @@ input {
 
 .profile-img {
   position: relative;
-  left: -10px;
-  height: 30px;
-  width: 30px;
+  left: -15px;
+  height: 25px;
+  width: 25px;
   object-fit: cover;
   border-radius: 50%;
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
   background-color: #141414;
+  border: none;
 }
 .log-in {
   text-decoration: none;
   color: rgb(226, 226, 226);
   font-weight: bold;
 }
+
 @media only screen and (max-width: 600px) {
   .profile {
-    width: 30px;
+    width: 10px;
     margin-right: 20px;
   }
   .dropdown {

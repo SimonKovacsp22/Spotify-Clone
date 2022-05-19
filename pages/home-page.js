@@ -64,18 +64,16 @@ function searchTitle() {
           let duration = album.data[i].duration
           let artist = album.data[i].artist.name
           artistContainer.innerHTML += `   
-                <div class="card artist-card p-3 mb-1">
+                <div class="card artist-card mb-1 mx-2 my-2">
                   <img
                     src=${image}
-                    class="card-img-top artist-card-img"
+                    class="card-img-top artist-card-img py-2"
                     alt="..."
                   />
                   <div class="card-body artist-card-body p-1">
-                    <h6 class="card-title p-0">${albumName}</h6>
-                    <p class="card-text p-0">${artist}</p>
-                    <small class="card-text p-0">${duration} min</small>
-                    
-                    <a href="./Artist.html?artist=${artist}">artist</a>
+                    <p class="text-light font-weight-bold s">${albumName}</p>
+                    <small class="card-text p-0 font-weight-bold mb-2">${artist}</small>
+             
                     <a href="./album-page.html?=${albumId}">
                     <i class="bi bi-play-circle-fill play-button-img"></i>
                     </a>

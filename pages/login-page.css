@@ -1,3 +1,6 @@
+body {
+  overflow-x: hidden;
+}
 .navbar {
   width: 100%;
   min-width: 450px;
@@ -16,7 +19,6 @@
 .facebook {
   background-color: #3b5998;
   color: rgb(217, 217, 217);
-  font-size: 17px;
 }
 .facebook:hover {
   color: white;
@@ -24,14 +26,13 @@
 .apple {
   background-color: black;
   color: rgb(217, 217, 217);
-  font-size: 17px;
 }
 .apple:hover {
   color: white;
 }
 .google {
   border: 1px solid rgb(159, 159, 159);
-  font-size: 17px;
+
   color: rgb(61, 61, 61);
 }
 .google:hover {
@@ -51,34 +52,35 @@
   background-color: #747474;
 }
 .logginBtn {
-  padding: 14px 34px;
-  color: rgb(57, 57, 57);
-  font-size: 18px;
+  padding: 10px 65px;
+  color: rgb(235, 235, 235);
+  font-size: 16px;
   font-weight: bold;
-
-  background-color: #1ed760;
-  border: none;
+  background-color: #47b850;
   border-radius: 40px;
 }
 .logginBtn:hover {
   transform: scale(105%);
   /* padding: 15px 36px; */
   transition: 0.2s ease-in-out;
-  color: rgb(20, 20, 20);
-  /* background-color: #1ed760; */
+  color: rgb(255, 255, 255);
+  background-color: #47b850;
   border: none;
   box-shadow: none;
+}
+.forget {
+  color: #3da245;
 }
 .logginBtn:focus {
   transform: scale(100%);
   box-shadow: none;
-  color: black;
-  background-color: #1ed760;
+  color: rgb(255, 255, 255);
+  background-color: #47b850;
 }
 .sportfy {
   min-width: 100%;
   border: 1px solid rgb(159, 159, 159);
-  font-size: 17px;
+
   color: rgb(61, 61, 61);
   padding: 10px 0 10px 0;
 }
@@ -91,7 +93,10 @@
 .facebook,
 .google,
 .sportfy {
-  padding: 10px 0;
+  padding: 7px 0;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
 }
 .apple:focus,
 .facebook:focus,
@@ -101,7 +106,7 @@
   box-shadow: none;
 }
 .input {
-  height: 50px;
+  height: 40px;
 }
 .input:focus {
   outline: #800000;
@@ -113,4 +118,18 @@
   box-sizing: border-box;
   padding: 20px;
   background-color: #800000;
+}
+.privacyDiv {
+  justify-content: center;
+}
+.privacy {
+  font-size: 11px;
+}
+.alertDiv {
+  border: 1px solid #c14e4e;
+  color: #c14e4e;
+  padding: 5px;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 5px;
 }

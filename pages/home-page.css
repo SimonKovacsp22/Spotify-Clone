@@ -28,16 +28,19 @@ body {
 }
 .header-card-container {
   position: relative;
-  height: 15vh;
+  height: 20vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-width: 1200px;
+  flex-wrap: wrap;
+  overflow-y: hidden;
 }
 .header-card {
   background-color: #38383876;
   height: 65px;
-  min-width: 250px;
+  min-width: 260px;
+  width: 260;
   margin: 0 20px;
   border: none;
   position: relative;
@@ -64,14 +67,19 @@ body {
 }
 .header-card-container1 {
   margin-top: 10vh;
-  height: 50vh;
+  height: auto;
   justify-content: space-between;
   min-width: 1200px;
+  width: 100%;
+  margin-left: -13px;
 }
 .header-card-container2 {
   justify-content: space-between;
   min-width: 1200px;
   margin-bottom: 20vh;
+}
+.recently-played {
+  width: 95%;
 }
 
 .header-card:hover {
@@ -88,14 +96,14 @@ body {
 }
 /* recently played container -----------*/
 .recently-played {
-  height: 35vh;
+  height: auto;
 }
 
 .artist-card {
-  background-color: #38383869;
-  min-width: 170px;
+  background-color: #171717;
+  min-width: 130px;
   width: 130px;
-  height: 280px;
+  height: 190px;
   cursor: pointer;
 }
 .artist-card img {
@@ -118,7 +126,7 @@ body {
   opacity: 1;
 }
 .artist-card:hover {
-  background-color: #5e5d5d69;
+  background-color: #17171790;
   -webkit-box-shadow: 1px 2px 15px 1px #000000;
   box-shadow: 1px 2px 15px 1px #000000;
 }
