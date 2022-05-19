@@ -10,6 +10,9 @@
   width: calc(100% - 240px);
   min-height: 100vh;
 }
+img{
+  object-fit: contain;
+}
 .linkDis{
   text-decoration: none;
   color: whitesmoke;

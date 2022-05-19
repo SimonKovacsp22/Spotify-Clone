@@ -39,6 +39,8 @@
           <a class="feature-item my-1">Liked Songs</a>
           <a class="feature-item my-1">Liked Songs vcv</a>
           <a class="feature-item my-1">Liked Songs</a>
+          <div class="showPic">
+          </div>
           <a class="feature-item my-1">Liked Songsccc</a>
           <a class="feature-item my-1">Liked Songs</a>
         </div>
@@ -127,9 +129,9 @@
           </div>
           <div class="col-7 p-0 flex-grow-2">
             <div class="card-body player-card-body px-0">
-              <p class="card-text">Last updated Last</p>
+              <p class="card-text" id="titels">Music name</p>
               <p class="card-text">
-                <small class="m-0">Last updated Last updated</small>
+                <small class="m-0" id="name">Artist name</small>
               </p>
             </div>
           </div>
@@ -209,6 +211,8 @@
         console.log(musics);
         renderAlbum(musics);
         renderTracks(musics)
+        putTitle();
+        putPic();
       } catch (err) {
         console.log(err);
       }
@@ -217,8 +221,8 @@
       let durationHr = Math.floor(obj.duration / 3600);
       let durationMin = Math.floor(obj.duration % 3600 / 60);
       let album = document.querySelector('.albumContainer');
-      album.innerHTML = `  <div class="col-xl-2 col-lg-2 col-12 pr-0 ml-xl-3 ml-md-0">
-          <img src="${obj.cover}" class="rounded w-100 shadow-lg" alt="..." />
+      album.innerHTML = `  <div class="col-xl-2 col-lg-2 col-12 pr-0 ml-xl-3 ml-md-0 albumPicContainer">
+          <img src="${obj.cover_xl}" class="rounded w-100 shadow-lg" alt="..." />
         </div>
         <div class="col-9 mt-xl-auto mt-lg-auto mt-2 mt-md-3">
           <h6 class="text-white">Album</h6>
@@ -243,16 +247,53 @@
         let durationSec = "0" + Math.floor(track.duration % 60).toString();
         counter = counter + 1;
         let tr = document.createElement("tr");
-        tr.className = "d-flex justify-content-between hoverIt"
+        let div = document.createElement("div")
+        div.className = "musicContainers"
+        tr.className = "d-flex justify-content-between hoverIt musicsInside"
         tr.innerHTML = `<th scope="row" class="text-white-50">
                   <span class="numberHover mr-4">${counter}</span><i class="bi bi-play mr-4"></i><span
                     class=" text-white makeSmaller">${track.title}</span>
                   <small class="text-white-50 margins d-block"><b>${track.artist.name}</b></small>
                 </th>
                 <td class="text-white-50">${durationMin.substring(durationMin.length - 2, durationMin.length)}:${durationSec.substring(durationSec.length - 2, durationSec.length)}</td>`
-        musicContainer.appendChild(tr);
+                div.appendChild(tr)
+                musicContainer.appendChild(div);
       }
     };
+    const putTitle = () =>{
+      let musicContainer = document.querySelectorAll(".musicContainers");
+      let footerTitle = document.querySelector("#titels");
+      let footerName = document.querySelector("#name")
+      for (let i = 0; i < musicContainer.length; i++) {
+        const aTtitle = musicContainer[i];
+        const tr = aTtitle.querySelector(".musicsInside")
+        let titleNode = aTtitle.querySelectorAll(".makeSmaller");
+        let artistName = aTtitle.querySelectorAll(".margins")
+        tr.addEventListener("click",function(){
+          for (let j = 0; j < titleNode.length; j++) {
+        const title = titleNode[j];
+        footerTitle.innerHTML = title.innerHTML;
+      }
+      for (let t = 0; t < artistName.length; t++) {
+        const name = artistName[t];
+        footerName.innerHTML = name.innerHTML;
+      }
+        })
+      }
+      };
+      const putPic = () => {
+        let musicContainer = document.querySelectorAll(".musicContainers");
+        let footerCon = document.querySelector(".showPic");
+        let albumPic = document.querySelector(".albumPicContainer");
+        for (let i = 0; i < musicContainer.length; i++) {
+        const aTtitle = musicContainer[i];
+        const tr = aTtitle.querySelector(".musicsInside")
+        tr.addEventListener("click",function(){
+          footerCon.innerHTML = albumPic.innerHTML;
+        })
+      }
+      };
+      // showPic
   </script>
 </body>
 
