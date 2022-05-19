@@ -15,36 +15,65 @@
 
 <body>
   <div class="container-fluid main-content-container d-flex px-0">
-
     <div class="sidebar">
       <div class="sidebar-top d-flex flex-column">
         <div class="logo">
-          <a href="#">
-            <img id="logo" src="./asset/Spotify_Logo.png" alt="" /></a>
+          <a href="#"><img id="logo" src="./asset/Spotify_Logo.png" alt=""></a>
         </div>
         <div class="sidebar-link d-flex flex-column py-3">
-          <a class="sidebar-item"><i class="bi bi-house-door-fill sidebar-item-img"></i>Home</a>
-          <a class="sidebar-item"><i class="bi bi-search sidebar-item-img"></i>Search</a>
-          <a class="sidebar-item"><i class="bi bi-music-note-list sidebar-item-img"></i>Your
-            Library</a>
+          <a href="./home-page.html" class="sidebar-item"><i class="bi bi-house-door-fill sidebar-item-img"></i><span>Home</span></a>
+          <a onclick="searchBarShow()" id="searchBarShow" class="sidebar-item">
+    
+               <i class="bi bi-search sidebar-item-img"></i><span>Search</span>
+              
+              </a>
+      
+          
+          <a class="sidebar-item"><i class="bi bi-music-note-list sidebar-item-img"></i><span>Your
+            Library</span></a>
         </div>
         <div class="song-action sidebar-link d-flex flex-column">
-          <a class="sidebar-item"><i class="bi bi-plus-square-fill sidebar-item-img"></i>Create
-            Playlist</a>
-          <a class="sidebar-item"><i class="bi bi-chat-square-heart sidebar-item-img"></i>Liked
-            Songs</a>
+          <a class="sidebar-item"><i class="bi bi-plus-square-fill sidebar-item-img"></i><span>Create
+            Playlist</span></a>
+          <a class="sidebar-item "><img class="sidebar-item-img mx-2" src="./asset/heart-icon.svg">
+            <span class="mx-1">Liked Songs</span></a>
         </div>
       </div>
       <div class="sidebar-bottom mt-2">
-        <div class="feature-div d-flex flex-column">
-          <a class="feature-item my-1">Liked Songs fgfg</a>
+        <div class="feature-div d-flex flex-column" id="style-1">
+          <!-- <a class="feature-item my-1">Liked Songs fgfg</a>
           <a class="feature-item my-1">Liked Songsv</a>
           <a class="feature-item my-1">Liked Songs</a>
           <a class="feature-item my-1">Liked Songs vcv</a>
           <a class="feature-item my-1">Liked Songs</a>
           <a class="feature-item my-1">Liked Songsccc</a>
-          <a class="feature-item my-1">Liked Songs</a>
-        </div>
+          <a class="feature-item my-1">Liked Songs</a> -->
+        
+                  <a class="feature-item my-1">Best life</a>
+                  <a class="feature-item my-1">Best Bad Friend</a>
+                  <a class="feature-item my-1">Best Friend</a>
+                  <a class="feature-item my-1">Best of You</a>
+                  <a class="feature-item my-1">Best of Us</a>
+                  <a class="feature-item my-1">Best Friend (feat. Doja Cat)</a>
+                  <a class="feature-item my-1">Best Song Ever</a>
+                  <a class="feature-item my-1">Best Friend</a>
+                  <a class="feature-item my-1">Best Friends</a>
+                  <a class="feature-item my-1">Best of Me</a>
+                  <a class="feature-item my-1">Best Part (feat. H.E.R.)</a>
+                  <a class="feature-item my-1">Best Of Me</a>
+                  <a class="feature-item my-1">Best of You</a>
+                  <a class="feature-item my-1">BEST ON EARTH (feat. BIA)</a>
+                  <a class="feature-item my-1">Best Thing I Never Had</a>
+                  <a class="feature-item my-1">BEST INTEREST</a>
+                  <a class="feature-item my-1">Best Day</a>
+                  <a class="feature-item my-1">Best Days</a>
+                  <a class="feature-item my-1">Best Friend</a>
+                  <a class="feature-item my-1">Best of My Love</a>
+                  <a class="feature-item my-1">Best Day Of My Life</a>
+                  <a class="feature-item my-1">Best Things</a>
+                  <a class="feature-item my-1">Best Day Of My Life</a>
+                  <a class="feature-item my-1">Best I Ever Had</a>
+                  <a class="feature-item my-1">Best Day</a></div>
       </div>
     </div>
     <div class="main-content  position-relative pl-5">
