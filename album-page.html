@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" />
   <title>Album</title>
   <link rel="stylesheet" href="album.css" />
-  <!-- <link rel="stylesheet" href="playbar.css"> -->
+   <link rel="stylesheet" href="playbar.css"> 
   <link rel="stylesheet" href="./pages/sidebar.css">
 </head>
 
@@ -152,8 +152,8 @@
         <div class="pb-left-section d-flex flex-row align-items-center col">
           <img id="pb-img-left" src="https://i.scdn.co/image/ab67616d00004851a12c000028e343a8496612bf" />
           <div class="px-3 text-truncate">
-            <p id="titels" class="mb-0"></p>
-            <p id="name" class="mb-0"></p>
+            <p id="titels" class="mb-0">Another One Bites The Dust - Remastered 2011</p>
+            <p id="name" class="mb-0">Queen</p>
           </div>
           <div class="control-btn" style="margin-left:10px">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1ed760"
@@ -377,41 +377,7 @@
       }
     };
     // obj.cover_xl
-    const changeSoundIcon = function () {
-      let soundIcon = document.querySelector('.sound-icon')
-      let soundIconCrossed = document.querySelector('.sound-icon-crossed')
-      soundIconCrossed.addEventListener('click', () => {
-        soundIcon.classList.remove('d-none')
-        soundIconCrossed.classList.add('d-none')
-      })
-      soundIcon.addEventListener('click', () => {
-        soundIcon.classList.add('d-none')
-        soundIconCrossed.classList.remove('d-none')
-      })
-    }
-    const fillHeartGreen = function () {
-      let greenHeartFull = document.querySelector('.svg-heart-fill')
-      let heartEmpty = document.querySelector('.svg-heart-empty')
-      greenHeartFull.addEventListener('click', () => {
-        heartEmpty.classList.remove('d-none')
-        greenHeartFull.classList.add('d-none')
-      })
-      heartEmpty.addEventListener('click', () => {
-        heartEmpty.classList.add('d-none')
-        greenHeartFull.classList.remove('d-none')
-      })
-    };
-    const svgHover = function () {
-      let pbSvgs = document.querySelectorAll('.playbar svg');
-      pbSvgs.forEach(svg => {
-        svg.addEventListener('mouseover', () => {
-          svg.classList.add('fill-white')
-        })
-        svg.addEventListener('mouseout', () => {
-          svg.classList.remove('fill-white')
-        })
-      })
-    };
+
     let user_id = new URLSearchParams(window.location.search).get("userId")
 console.log(user_id)
     const users = [
@@ -451,6 +417,7 @@ userName.textContent = result[0].name
 userImg.src = result[0].avatar
 
   </script>
+  <script src="playbar.js"> </script>
 </body>
 
 </html>

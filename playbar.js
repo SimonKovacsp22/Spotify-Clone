@@ -1,7 +1,11 @@
+
+let pbSvgs = document.querySelectorAll(".playbar svg")
+
 const svgHover = function () {
   pbSvgs.forEach((svg) => {
     svg.addEventListener("mouseover", () => {
-      svg.classList.add("fill-white")
+       svg.classList.add("fill-white")
+      
     })
     svg.addEventListener("mouseout", () => {
       svg.classList.remove("fill-white")
@@ -26,6 +30,24 @@ const makeAlbumPictureBigger = function () {
   let makeAlbumPicBigBtn = document.querySelector("#svg-make-album-img-big")
   makeAlbumPicBigBtn.addEventListener("click", () => {
     makeAlbumPicBigBtn.classList.toggle("already-green")
-    AlbumPic.classList.toggle("d-none")
+
   })
 }
+
+const changeSoundIcon = function () {
+  let soundIcon = document.querySelector(".sound-icon")
+  let soundIconCrossed = document.querySelector(".sound-icon-crossed")
+  soundIconCrossed.addEventListener("click", () => {
+    soundIcon.classList.remove("d-none")
+    soundIconCrossed.classList.add("d-none")
+  })
+  soundIcon.addEventListener("click", () => {
+    soundIcon.classList.add("d-none")
+    soundIconCrossed.classList.remove("d-none")
+  })
+}
+
+svgHover()
+fillHeartGreen()
+changeSoundIcon()
+makeAlbumPictureBigger()

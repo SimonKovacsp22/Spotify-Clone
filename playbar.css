@@ -26,6 +26,7 @@
 }
 
 .play-btn {
+  position: relative;
   height: 32px;
   min-width: 32px;
   display: flex;
@@ -43,7 +44,7 @@
   border-width: 7px 0 7px 12px;
   border-color: transparent transparent transparent black;
   left: calc(50% - 5px);
-  top: calc(50% - 20px);
+  top: calc(50% - 7px);
 }
 
 .control-btn {
@@ -98,9 +99,13 @@
 .play-btn:hover .play-triangle {
   border-width: 8px 0 8px 14px;
   left: calc(50% - 5px);
-  top: calc(50% - 20px);
+  top: calc(50% - 8px);
 }
 
 .already-green {
   fill: #1ed760;
+}
+
+.fill-white {
+  fill:white
 }
