@@ -137,7 +137,7 @@ window.onload = async function () {
    scrollNavbar()
    displayHiddenSongs(artist,tracks)
    displayIndexesForSongsList()
-
+   getCards() 
    
    
 }
@@ -217,3 +217,9 @@ const options = {
       "X-RapidAPI-Key": "8680b311b0mshfa595d3b50bced8p16d6f0jsnfe6371eab6a7",
     },
   }
+  const getCards = async function() {
+    const response = await fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=Eminem`, options)
+    let cards = await response.json()
+    console.log(cards.data)
+  }
+  
