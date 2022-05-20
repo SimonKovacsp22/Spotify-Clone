@@ -30,7 +30,7 @@ const displaySongs = function (artist,tracklist){
                                          <img id='track-image'style="width:40px; height: 40px"src="${track.album.cover_small}"/>
                                          <p  id='track-title'>${track.title}</p></div>
                                          <div class="song-rank-and-duration d-flex justify-content-end  gap-10">
-                                             <p class="time m-0">${track.rank}</p>
+                                             <p class="time m-0">${track.rank.toLocaleString('en-US')}</p>
                                              <p class="listens m-0">${Math.floor(track.duration / 60)+':'+track.duration%60}</p>
                                          </div>
                                          `
