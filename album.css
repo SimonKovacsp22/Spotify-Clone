@@ -1,10 +1,9 @@
 .backgroundColor {
-  background: rgb(35, 121, 9);
-  background: linear-gradient(
-    90deg,
-    rgba(35, 121, 9, 1) 0%,
-    rgba(19, 51, 10, 1) 32%,
-    rgba(0, 0, 0, 1) 100%
+  background-image: linear-gradient(
+    0deg,
+    hsl(0deg 0% 0%) 55%,
+    hsl(222deg 26% 10%) 75%,
+    hsl(220deg 34% 17%) 100%
   );
   margin-left: 240px;
   width: calc(100% - 240px);
@@ -87,47 +86,6 @@ body {
   height: 40px;
   margin: 15px 0 0 10px;
 }
-.sidebar {
-  position: fixed;
-  width: 240px;
-  min-width: 240px;
-  min-height: 100%;
-  background-color: #000000;
-}
-.sidebar-top {
-  height: 38vh;
-  border-bottom: 0.5px solid gray;
-  margin-left: 20px;
-}
-.sidebar-item {
-  text-decoration: none;
-  color: rgb(189, 189, 189);
-  list-style: none;
-  font-size: 16px;
-  padding: 5px 0;
-  width: 100%;
-  cursor: pointer;
-}
-.sidebar-item i {
-  font-size: 18px;
-}
-.sidebar-item-img {
-  fill: white;
-  margin: 8px 14px 8px 6px;
-}
-.sidebar-link a:hover {
-  transition: 0.5s ease;
-  /* background-color: #323232; */
-  color: rgb(253, 253, 253);
-  font-weight: 400;
-  text-decoration: none;
-}
-.sidebar-link a img {
-  justify-content: center;
-  height: 20px;
-  margin: 8px 0 8px 0;
-  color: rgb(189, 189, 189);
-}
 h6 {
   color: rgb(200, 200, 200);
 }
@@ -146,34 +104,47 @@ h6 {
   text-decoration: none;
 }
 /* nav top-------------- */
+/* nav top-------------- */
 .nav-top {
   position: fixed;
-  height: 10vh;
+  height: 8vh;
   width: calc(100% - 240px);
   background-color: #12121251;
   z-index: 1;
 }
 .scroll {
   background-color: #121212fd;
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 }
-.arrow-left,
+.arrow-left {
+  background-color: #00000069;
+  border-radius: 50%;
+  height: 25px;
+  cursor: pointer;
+  color: rgb(209, 210, 212);
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 20px;
+}
 .arrow-right {
   background-color: #00000069;
   border-radius: 50%;
-  height: 40px;
+  height: 25px;
   cursor: pointer;
   color: rgb(209, 210, 212);
+  font-size: 20px;
+  padding: 5px;
+  left: 20px;
 }
-.arrow-left {
-  margin-left: 20px;
+input {
+  border: none;
 }
 .profile {
   position: relative;
   justify-content: space-around;
   max-width: 170px;
+  height: 30px;
   background-color: #00000069;
-  padding: 3px;
   z-index: 2;
   right: 3%;
 }
@@ -181,7 +152,7 @@ h6 {
   width: 70%;
   background-color: transparent;
   color: rgb(209, 210, 212);
-  padding: 10px 0 10px 0;
+  padding: 5px 0 5px 0;
   margin-left: -5%;
 }
 .dropdown button:hover {
@@ -190,16 +161,46 @@ h6 {
 
 .profile-img {
   position: relative;
-  left: -10px;
-  height: 30px;
-  width: 30px;
+  left: -15px;
+  height: 25px;
+  width: 25px;
   object-fit: cover;
   border-radius: 50%;
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
   background-color: #141414;
+  border: none;
 }
+.log-in {
+  text-decoration: none;
+  color: rgb(226, 226, 226);
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile {
+    width: 10px;
+    margin-right: 20px;
+  }
+  .dropdown {
+    width: 30px;
+  }
+  .dropdown button {
+    max-width: 30px;
+    display: none;
+  }
+  .arrow-left {
+    display: none;
+  }
+  .arrow-right {
+    display: none;
+  }
+  input {
+    width: 150px;
+  }
+}
+
 /* music-player bottom----------------- */
 .player {
   position: fixed;
