@@ -146,7 +146,7 @@ input {
   height: 30px;
   background-color: #00000069;
   z-index: 2;
-  right: 3%;
+  right: 4%;
 }
 .dropdown button {
   width: 70%;
@@ -156,6 +156,13 @@ input {
   margin-left: -5%;
 }
 .dropdown button:hover {
+  color: aliceblue;
+}
+.dropdown-menu {
+  position: relative;
+  transform: translate(-150%, 130px);
+}
+.dropdown-toggle a span:hover {
   color: aliceblue;
 }
 
