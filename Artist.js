@@ -208,7 +208,7 @@ const displayHiddenSongs = function (artist, tracklist) {
 SeeMore.addEventListener("click", function (event) {
   LiElements = document.querySelectorAll(".songs-section li")
   event.target.innerText = "SEE LESS"
-  for (let index = 4; index < LiElements.length; index++) {
+  for (let index = 5; index < LiElements.length; index++) {
     li = LiElements[index]
     li.classList.toggle("d-none")
   }
