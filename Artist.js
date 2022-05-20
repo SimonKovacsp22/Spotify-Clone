@@ -127,6 +127,7 @@ window.onload = async function () {
     console.log(artist)
     let tracklistUrl = artist.tracklist
    let tracks = await getTracklist(tracklistUrl)
+   let cards = await getCards()
    displaySongs(artist,tracks)
    displayArtistPick(artist,tracks[0].album)
    svgHover()
@@ -138,7 +139,8 @@ window.onload = async function () {
    displayHiddenSongs(artist,tracks)
    displayIndexesForSongsList()
    getCards() 
-   
+   displayCards(cards)
+
    
 }
 
@@ -221,5 +223,29 @@ const options = {
     const response = await fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=Eminem`, options)
     let cards = await response.json()
     console.log(cards.data)
+    return cards.data
   }
+
+  const displayCards = function (data) {
+      let popularReleasesContainer = document.querySelector('.popular-releases-container')
+      for (let index = 5; index <17; index++) {
+          const card = data[index];
+          cardContainer = document.createElement('div')
+          cardContainer.className =  "card artist-card mb-1 mx-2 my-2"
+          cardContainer.innerHTML =  
+          `<img src=${card.album.cover_medium } class="card-img-top artist-card-img py-2" alt="..." />
+           <div class="card-body artist-card-body p-1">
+           <p class="text-light font-weight-bold s">${card.album.title}</p>
+           <small class="card-text p-0 font-weight-bold mb-2">${card.artist.name}</small>
+     
+            <a href="./album-page.html?=${card.album.id}">
+            <i class="bi bi-play-circle-fill play-button-img"></i>
+            </a>
+          </div>
+        `
+        popularReleasesContainer.appendChild(cardContainer)
+        
+      }
+    }
+  
   
