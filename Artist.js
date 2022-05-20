@@ -23,10 +23,10 @@ const displaySongs = function (artist,tracklist){
         let artistSongLiNode =document.createElement('li')
         artistSongLiNode.className = 'd-flex align-items-center mb-2 gap-6 pb-3 pt-2 rounded'
         artistSongLiNode.innerHTML  = `   
-                                         <div class='d-flex align-items-center'>
+                                         <div class='d-flex align-items-center w-350'>
                                          <img id='track-image'style="width:40px; height: 40px"src="${track.album.cover_small}"/>
-                                         <p id='track-title'>${track.title}</p></div>
-                                         <div class="song-rank-and-duration d-flex justify-content-end flex-grow-1 gap-10">
+                                         <p  id='track-title'>${track.title}</p></div>
+                                         <div class="song-rank-and-duration d-flex justify-content-end  gap-10">
                                              <p class="time m-0">${track.rank}</p>
                                              <p class="listens m-0">${Math.floor(track.duration / 60)+':'+track.duration%60}</p>
                                          </div>
