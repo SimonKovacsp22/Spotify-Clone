@@ -1,6 +1,6 @@
 let api = "https://striveschool-api.herokuapp.com/api/deezer/artist"
 let endPoint = new URLSearchParams(window.location.search).get("artist");
-let url = api + "/" + endPoint
+let url = api + "/" + "eminem"
 
 
 let songsOl = document.getElementById('songs-ol')
