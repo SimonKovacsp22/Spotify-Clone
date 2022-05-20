@@ -70,7 +70,7 @@
 
 .songs-container {
     background: linear-gradient(180deg, rgb(81,81,81) 0%, rgb(18,18,18) 42%, rgba(0,0,0,1) 100%);
-    height: calc(160vh - 416px);
+    height: calc(200vh - 416px);
     
 }
 .songs-controls {
@@ -286,6 +286,32 @@ li div:nth-child(1) p {
             width: 26px;
 
 }
+.artist-card {
+    background-color: #171717;
+    min-width: 130px;
+    width: 130px;
+    cursor: pointer;
+  }
+  .artist-card img {
+    min-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  .artist-card-body {
+    color: rgb(175, 175, 175);
+    min-width: 100%;
+    overflow: hidden;
+  }
+  .artist-card-body p {
+    color: rgb(175, 175, 175);
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+  .cards-container h4{
+     color:white;
+     padding: 0 32px 0 32px;
+     margin-top: 25px;
+  }
 @media (max-width: 1450px) {
     .gap-10 {
         gap: 150px

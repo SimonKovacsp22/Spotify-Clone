@@ -228,10 +228,10 @@ const options = {
 
   const displayCards = function (data) {
       let popularReleasesContainer = document.querySelector('.popular-releases-container')
-      for (let index = 5; index <17; index++) {
+      for (let index = 5; index <25; index++) {
           const card = data[index];
           cardContainer = document.createElement('div')
-          cardContainer.className =  "card artist-card mb-1 mx-2 my-2"
+          cardContainer.className =  "card artist-card mb-1 mx-2 my-2 col-2"
           cardContainer.innerHTML =  
           `<img src=${card.album.cover_medium } class="card-img-top artist-card-img py-2" alt="..." />
            <div class="card-body artist-card-body p-1">

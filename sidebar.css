@@ -29,6 +29,7 @@
 .sidebar-top div:nth-child(2) .sidebar-item:first-of-type {
     background-color:#323232;
     color:rgb(253, 253, 253) ;
+    border-radius: 4px;
 }
 
 .sidebar-link a:hover {
