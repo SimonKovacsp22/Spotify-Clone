@@ -3,14 +3,15 @@
   position: fixed;
   height: 8vh;
   width: calc(100% - 240px);
-  background-color: #12121251;
-  z-index: 1;
+  background-color: #12121200;
+  z-index: 100;
 }
 .scroll {
   background-color: #121212fd;
   transition: 0.2s ease-in;
 }
 .arrow-left {
+  position: relative;
   background-color: #00000069;
   border-radius: 50%;
   height: 25px;
@@ -18,9 +19,10 @@
   color: rgb(209, 210, 212);
   font-size: 20px;
   padding: 5px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 .arrow-right {
+  position: relative;
   background-color: #00000069;
   border-radius: 50%;
   height: 25px;
@@ -28,7 +30,7 @@
   color: rgb(209, 210, 212);
   font-size: 20px;
   padding: 5px;
-  left: 20px;
+  left: 10px;
 }
 input {
   border: none;
@@ -40,16 +42,22 @@ input {
   height: 30px;
   background-color: #00000069;
   z-index: 2;
-  right: 3%;
+  right: 4%;
 }
 .dropdown button {
   width: 70%;
   background-color: transparent;
   color: rgb(209, 210, 212);
   padding: 5px 0 5px 0;
-  margin-left: -5%;
 }
 .dropdown button:hover {
+  color: rgb(209, 210, 212);
+}
+.dropdown-menu {
+  position: relative;
+  transform: translate(-150%, 130px);
+}
+.dropdown-toggle a span:hover {
   color: aliceblue;
 }
 

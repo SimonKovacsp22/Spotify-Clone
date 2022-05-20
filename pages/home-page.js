@@ -42,7 +42,7 @@ function searchTitle() {
     artistContainer.innerHTML = ""
     let textInput = document.querySelector("#textInput").value
 
-    let query = textInput !== "" ? textInput : "best"
+    let query = textInput !== "" ? textInput : "eminem"
     fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${query}`, options)
       .then((data) => data.json())
       // .then((data) => {
@@ -71,10 +71,10 @@ function searchTitle() {
                     alt="..."
                   />
                   <div class="card-body artist-card-body p-1">
-                    <p class="text-light font-weight-bold s">${albumName}</p>
-                    <small class="card-text p-0 font-weight-bold mb-2">${artist}</small>
+                    <p class="text-light font-weight-bold text-truncate">${albumName}</p>
+                    <small class="font-weight-bold mb-2 text-truncate">${artist}</small>
              
-                    <a href="./album-page.html?=${albumId}">
+                    <a href="./album-page.html?id=${albumId}&userId=${user_id}">
                     <i class="bi bi-play-circle-fill play-button-img"></i>
                     </a>
                   </div>
@@ -90,12 +90,12 @@ function searchTitle() {
                         />
                       </div>
                       <div class="col-8">
-                        <div class="card-body header-card-body">
-                          <p class="card-text">
+                        <div class="card-body header-card-body text-left ">
+                          <p class="card-text  py-1 text-truncate">
                           ${title}
                           </p>
                           <p class="card-text">
-                            <small class="m-0">${artist}</small>
+                            <small card-text py-1 text-truncate>${artist}</small>
                           </p>
                         </div>
                       </div>
@@ -162,3 +162,39 @@ const result = users.filter((user) => user.userId == user_id)
 console.log(result[0].name)
 userName.textContent = result[0].name
 userImg.src = result[0].avatar
+
+//playbar-------------------------------
+
+const svgHover = function () {
+  pbSvgs.forEach((svg) => {
+    svg.addEventListener("mouseover", () => {
+      svg.classList.add("fill-white")
+    })
+    svg.addEventListener("mouseout", () => {
+      svg.classList.remove("fill-white")
+    })
+  })
+}
+
+const fillHeartGreen = function () {
+  let greenHeartFull = document.querySelector(".svg-heart-fill")
+  let heartEmpty = document.querySelector(".svg-heart-empty")
+  greenHeartFull.addEventListener("click", () => {
+    heartEmpty.classList.remove("d-none")
+    greenHeartFull.classList.add("d-none")
+  })
+  heartEmpty.addEventListener("click", () => {
+    heartEmpty.classList.add("d-none")
+    greenHeartFull.classList.remove("d-none")
+  })
+}
+
+const makeAlbumPictureBigger = function () {
+  let makeAlbumPicBigBtn = document.querySelector("#svg-make-album-img-big")
+  makeAlbumPicBigBtn.addEventListener("click", () => {
+    makeAlbumPicBigBtn.classList.toggle("already-green")
+    AlbumPic.classList.toggle("d-none")
+  })
+}
+fillHeartGreen()
+//--------------------------------------------------

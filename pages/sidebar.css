@@ -92,3 +92,7 @@ h6 {
   /* border-radius: 10px; */
   background: rgba(216, 212, 212, 0.23);
 }
+.active {
+  background-color: #323232;
+  color: rgb(253, 253, 253);
+}

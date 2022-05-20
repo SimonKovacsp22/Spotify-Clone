@@ -1,15 +1,21 @@
 .backgroundColor {
-  background: rgb(35, 121, 9);
-  background: linear-gradient(
-    90deg,
-    rgba(35, 121, 9, 1) 0%,
-    rgba(19, 51, 10, 1) 32%,
-    rgba(0, 0, 0, 1) 100%
+  background-image: linear-gradient(
+    0deg,
+    hsl(0deg 0% 0%) 55%,
+    hsl(222deg 26% 10%) 75%,
+    hsl(220deg 34% 17%) 100%
   );
   margin-left: 240px;
   width: calc(100% - 240px);
+  min-height: 100vh;
 }
-
+img {
+  object-fit: contain;
+}
+.linkDis {
+  text-decoration: none;
+  color: whitesmoke;
+}
 .trasparentDark {
   background-color: rgb(0, 0, 0, 0.3);
 }
@@ -80,47 +86,6 @@ body {
   height: 40px;
   margin: 15px 0 0 10px;
 }
-.sidebar {
-  position: fixed;
-  width: 240px;
-  min-width: 240px;
-  min-height: 100%;
-  background-color: #000000;
-}
-.sidebar-top {
-  height: 38vh;
-  border-bottom: 0.5px solid gray;
-  margin-left: 20px;
-}
-.sidebar-item {
-  text-decoration: none;
-  color: rgb(189, 189, 189);
-  list-style: none;
-  font-size: 16px;
-  padding: 5px 0;
-  width: 100%;
-  cursor: pointer;
-}
-.sidebar-item i {
-  font-size: 18px;
-}
-.sidebar-item-img {
-  fill: white;
-  margin: 8px 14px 8px 6px;
-}
-.sidebar-link a:hover {
-  transition: 0.5s ease;
-  /* background-color: #323232; */
-  color: rgb(253, 253, 253);
-  font-weight: 400;
-  text-decoration: none;
-}
-.sidebar-link a img {
-  justify-content: center;
-  height: 20px;
-  margin: 8px 0 8px 0;
-  color: rgb(189, 189, 189);
-}
 h6 {
   color: rgb(200, 200, 200);
 }
@@ -139,34 +104,37 @@ h6 {
   text-decoration: none;
 }
 /* nav top-------------- */
+/* nav top-------------- */
 .nav-top {
   position: fixed;
-  height: 10vh;
+  height: 8vh;
   width: calc(100% - 240px);
-  background-color: #12121251;
+  background-color: #12121200;
   z-index: 1;
 }
 .scroll {
   background-color: #121212fd;
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 }
 .arrow-left {
   background-color: #00000069;
   border-radius: 50%;
-  height: 35px;
+  height: 25px;
   cursor: pointer;
   color: rgb(209, 210, 212);
   font-size: 20px;
   padding: 5px;
+  margin-left: 20px;
 }
 .arrow-right {
   background-color: #00000069;
   border-radius: 50%;
-  height: 35px;
+  height: 25px;
   cursor: pointer;
   color: rgb(209, 210, 212);
   font-size: 20px;
   padding: 5px;
+  left: 20px;
 }
 input {
   border: none;
@@ -175,8 +143,8 @@ input {
   position: relative;
   justify-content: space-around;
   max-width: 170px;
+  height: 30px;
   background-color: #00000069;
-  padding: 3px;
   z-index: 2;
   right: 3%;
 }
@@ -184,7 +152,7 @@ input {
   width: 70%;
   background-color: transparent;
   color: rgb(209, 210, 212);
-  padding: 10px 0 10px 0;
+  padding: 5px 0 5px 0;
   margin-left: -5%;
 }
 .dropdown button:hover {
@@ -193,24 +161,26 @@ input {
 
 .profile-img {
   position: relative;
-  left: -10px;
-  height: 30px;
-  width: 30px;
+  left: -15px;
+  height: 25px;
+  width: 25px;
   object-fit: cover;
   border-radius: 50%;
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
   background-color: #141414;
+  border: none;
 }
 .log-in {
   text-decoration: none;
   color: rgb(226, 226, 226);
   font-weight: bold;
 }
+
 @media only screen and (max-width: 600px) {
   .profile {
-    width: 30px;
+    width: 10px;
     margin-right: 20px;
   }
   .dropdown {
@@ -232,51 +202,109 @@ input {
 }
 
 /* music-player bottom----------------- */
-.player {
+:root {
+  --playbarbg: #181818;
+  --pbtextColor: #dfd3d5;
+  --pbbgColor: #515151;
+  --pbBorder: #252525;
+}
+
+#pb-container-fluid > div {
+  padding-top: 13px;
+}
+
+.playbar {
   position: fixed;
   left: 0;
+  height: 90px;
+  background-color: var(--playbarbg);
+  color: var(--pbtextColor);
+  position: fixed;
   bottom: 0;
-  height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  background-color: #121212;
-  align-items: center;
-  width: 100%;
-  min-width: 1200px;
-  border-top: 0.5px solid rgb(57, 42, 0);
+  border: 1px solid var(--pbBorder);
 }
-.player-card {
-  height: 50px;
-  display: flex;
-  justify-content: space-around;
-  min-width: 300px;
-}
-.player-card-img {
-  height: 45px;
-  width: 45px;
-  object-fit: cover;
-}
-.player-card-body p {
-  line-height: 5px;
-  color: rgb(175, 175, 175);
-  font-size: 15px;
-}
-.player-controller {
-  color: rgb(175, 175, 175);
-  font-size: 14px;
-  cursor: pointer;
-}
-.progress {
-  height: 1.5px;
-  width: 70%;
-}
-.player-buttons {
-  width: 500px;
-  min-width: 500px;
-}
-.player-duraton {
-  font-size: 10px;
-}
-.controller-right {
+
+.middle-section {
   min-width: 200px;
+  gap: 5px;
+}
+
+.play-btn {
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 2px;
+}
+.play-triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent black;
+  left: calc(50% - 5px);
+  top: calc(50% - 20px);
+}
+
+.control-btn {
+  width: 32px;
+  height: 32px;
+  background-color: var(--playbarbg);
+}
+.control-btn-right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.control-btn-left {
+  display: flex;
+  justify-content: s;
+  align-items: center;
+}
+
+.progress-bar {
+  height: 5px;
+  background-color: var(--pbbgColor);
+  border-radius: 2px;
+  width: 80%;
+}
+
+.volume-bar {
+  height: 5px;
+  background-color: var(--pbtextColor);
+  border-radius: 2px;
+  width: 90px;
+}
+
+#pb-container-fluid > div > div > div > p:nth-child(2),
+.middle-section > div:nth-child(2) p {
+  font-size: 12px;
+}
+
+#pb-song-title {
+  font-weight: 700;
+  font-size: small;
+}
+
+.middle-section > div {
+  gap: 6px;
+}
+.play-btn:hover {
+  height: 36px;
+  min-width: 36px;
+  margin: 0;
+}
+.play-btn:hover .play-triangle {
+  border-width: 8px 0 8px 14px;
+  left: calc(50% - 5px);
+  top: calc(50% - 20px);
+}
+
+.already-green {
+  fill: #1ed760;
 }
