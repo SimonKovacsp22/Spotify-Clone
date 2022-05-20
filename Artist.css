@@ -217,6 +217,7 @@
 
 .w-350 {
   min-width: 350px;
+  max-width: 350px;
 }
 
 .m-0 {
