@@ -79,12 +79,74 @@
     </div>
     <div class="main-content  position-relative pl-5">
       <div class="header d-flex flex-column justify-content-end ">
-        <div class="m-auto d-flex col-11 justify-content-between align-items-center nav-top">
-          <div class="control-arrow col-6 d-flex mx-1">
-            <img class="arrow-left mx-1" src="./asset/chevron-left.svg" alt="" />
-            <img class="arrow-right mx-1"src="./asset/chevron-right.svg"alt=""/>
+        <div
+        class="m-auto d-flex col-11 justify-content-between align-items-center nav-top"
+      >
+        <div class="control-arrow col-6 d-flex mx-1">
+          <img class="arrow-left mx-1" src="./asset/chevron-left.svg" alt="" />
+          <img
+            class="arrow-right mx-1"
+            src="./asset/chevron-right.svg"
+            alt=""
+          />
+         
+      
+          <div id="searchBar" class="input-group-append d-flex bg-light  rounded-pill mx-3 search-bar-hidden ">
+            <div class="input-group d-flex" >
+            <button
+              onclick="searchTitle()"
+              class="btn text-white shadow-none p-0 ml-1"
+              type="button"
+              id="button-addon2"
+            >
+              <i class="bi bi-search sidebar-item-img text-dark"></i>
+            </button>
+              <input
+                id="textInput"
+                type="text"
+                class="form-control  rounded-pill out shadow-none border-0 p-0"
+                placeholder="Enter artist name"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
           </div>
         </div>
+        </div>
+        <div class="profile rounded-pill col-6 text-end">
+          <div class="dropdown">
+            <img
+              class="profile-img mx-2"
+              src="./asset/person-circle.svg"
+              alt=""
+            />
+       
+            <button
+              class="btn dropdown-toggle p-0 userName"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            ><a class="log-in" href="./login-page.html"><span>Log in</span></a>
+             
+            </button>
+            <ul
+              class="dropdown-menu bg-dark mt-2"
+              aria-labelledby="dropdownMenuButton1"
+            >
+              <li>
+                <a class="dropdown-item text-light text-center font-weight-bolder" href="./login-page.html"
+                  ><span >Log out</span></a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-light text-center font-weight-bolder" href="./login-page.html"
+                  ><span >Log in</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
        <div>
           <span class="d-flex align-items-center ">
             <div class="white-verified-bg"></div>
