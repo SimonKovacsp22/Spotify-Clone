@@ -9,6 +9,9 @@ let pageBgcontainer = document.querySelector('.header')
 let pbSvgs = document.querySelectorAll('.playbar svg')
 let allLiWithSongs = document.querySelectorAll('.songs-section li')
 let followBtn = document.querySelector('.follow-btn')
+let indexContainer = document.querySelectorAll('li div:nth-child(1)')
+let SeeMore = document.querySelector('.more-btn')
+
 
 const getArtist = async function (url) {
     const response = await fetch(url)
@@ -36,18 +39,22 @@ const displaySongs = function (artist,tracklist){
     });
    
    
+   
     pageBgcontainer.style.backgroundImage = `url(${artist.picture_xl})`
+    
+}
+const displayIndexesForSongsList = function () {
     let indexContainer = document.querySelectorAll('li div:nth-child(1)')
     for (let index = 0; index < indexContainer.length; index++) {
-        
-        let indexP = document.createElement('p')
-        indexP.setAttribute('id','track-index')
-        indexP.innerText = `${index+1}`
-        indexContainer[index].appendChild(indexP)
-        
-        
-    }
     
+    let indexP = document.createElement('p')
+    indexP.setAttribute('id','track-index')
+    indexP.innerText = `${index+1}`
+    indexContainer[index].appendChild(indexP)
+    
+    
+}
+
 }
 
 const displayArtistPick = function (artist,album) {
@@ -127,8 +134,14 @@ window.onload = async function () {
    makeAlbumPictureBigger()
    changeSoundIcon()
    handleFollowBtn()
+   scrollNavbar()
+   displayHiddenSongs(artist,tracks)
+   displayIndexesForSongsList()
+
+   
    
 }
+
 
 const changeSoundIcon =  function () {
     let soundIcon = document.querySelector('.sound-icon')
@@ -151,3 +164,49 @@ const handleFollowBtn = function () {
   })
 }
 
+window.onscroll = function () {
+    scrollNavbar()
+  }
+
+function scrollNavbar() {
+    let navbarBg = document.querySelector(".nav-top")
+  
+    //console.log(navLinks);
+    if (document.documentElement.scrollTop > 2) {
+      navbarBg.classList.add("scroll")
+      // Change the color of navLinks on scroll
+    } else {
+      navbarBg.classList.remove("scroll")
+      // Change the color of navLinks back to default
+    }
+  }
+
+  const displayHiddenSongs = function (artist,tracklist){
+   
+    tracklist.forEach(track => {
+        let artistSongLiNode =document.createElement('li')
+        artistSongLiNode.className = 'd-flex align-items-center mb-2 gap-6 pb-3 pt-2 rounded d-none'
+        artistSongLiNode.innerHTML  = `   
+                                         <div class='d-flex align-items-center w-350'>
+                                         <img id='track-image'style="width:40px; height: 40px"src="${track.album.cover_small}"/>
+                                         <p  id='track-title'>${track.title}</p></div>
+                                         <div class="song-rank-and-duration d-flex justify-content-end  gap-10">
+                                             <p class="time m-0">${track.rank}</p>
+                                             <p class="listens m-0">${Math.floor(track.duration / 60)+':'+track.duration%60}</p>
+                                         </div>
+                                         `
+                                         ;
+        songsOl.appendChild(artistSongLiNode)
+    });  
+}
+
+SeeMore.addEventListener('click',function(event){
+    LiElements = document.querySelectorAll('.songs-section li')
+    event.target.innerText = "SEE LESS"
+    for (let index = 4; index <LiElements.length; index++) {
+        li = LiElements[index];
+        li.classList.toggle('d-none')
+        
+    }
+})
+ 

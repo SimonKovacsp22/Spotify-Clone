@@ -3,7 +3,7 @@
     height: 8vh;
     width: calc( 100% - 240px );
     background-color: #12121251;
-    z-index: 1;
+    z-index: 100;
     left: 240px;
     top:0;
   }
@@ -44,11 +44,13 @@
     right: 3%;
   }
   .dropdown button {
-    width: 70%;
+    width: 60%;
     background-color: transparent;
     color: rgb(209, 210, 212);
     padding: 5px 0 5px 0;
     margin-left: -5%;
+    margin-right: 10%;
+    margin-top: 2px;
   }
   .dropdown button:hover {
     color: aliceblue;

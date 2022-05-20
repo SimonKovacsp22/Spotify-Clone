@@ -25,6 +25,12 @@
   text-align: left;
   font-size: 17px;
 }
+
+.sidebar-top div:nth-child(2) .sidebar-item:first-of-type {
+    background-color:#323232;
+    color:rgb(253, 253, 253) ;
+}
+
 .sidebar-link a:hover {
   transition: 0.5s ease;
   background-color: #323232;
@@ -45,7 +51,6 @@
 }
 .sidebar-link a:hover {
   transition: 0.5s ease;
-  /* background-color: #323232; */
   color: rgb(253, 253, 253);
   font-weight: 400;
 }
