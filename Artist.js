@@ -1,6 +1,6 @@
 let api = "https://striveschool-api.herokuapp.com/api/deezer/artist"
 let endPoint = new URLSearchParams(window.location.search).get("artist");
-let url = api + "/" + 'sia'
+let url = api + "/" + endPoint
 
 
 let songsOl = document.getElementById('songs-ol')
@@ -16,7 +16,6 @@ let SeeMore = document.querySelector('.more-btn')
 const getArtist = async function (url) {
     const response = await fetch(url)
     const artist = await response.json()
-   console.log(artist)
    return artist  
 }
 
@@ -79,7 +78,7 @@ const displayArtistPick = function (artist,album) {
 const getTracklist = async function (url) {
     const response = await fetch(url)
     const tracklist = await response.json()
-    console.log(tracklist.data[0])
+    
    return tracklist.data
 }
 
@@ -124,7 +123,7 @@ const makeAlbumPictureBigger = async function () {
 window.onload = async function () {
     await getArtist(url)
     let artist = await getArtist(url)
-    console.log(artist)
+    
     let tracklistUrl = artist.tracklist
    let tracks = await getTracklist(tracklistUrl)
    let cards = await getCards()
@@ -220,9 +219,9 @@ const options = {
     },
   }
   const getCards = async function() {
-    const response = await fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=Eminem`, options)
+    const response = await fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${endPoint}`, options)
     let cards = await response.json()
-    console.log(cards.data)
+    
     return cards.data
   }
 

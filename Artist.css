@@ -146,12 +146,7 @@
     border: none;
   }
 
-  .popular-releases-container h4 {
-    font-weight: 700;
-    font-size: 22px;
-     color:#fff;
-     margin-bottom: 25px;
-  }
+
 
   .listens,.time {
     font-weight: 700;
@@ -160,8 +155,11 @@
   }
 
   .popular-releases-container {
-    padding-left: 32px;
-    margin-top: 60px;
+    padding-left:0;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 32px 0 32px;
   }
 
   .artist-pick {
@@ -308,9 +306,15 @@ li div:nth-child(1) p {
     padding-bottom: 10px;
   }
   .cards-container h4{
-     color:white;
-     padding: 0 32px 0 32px;
-     margin-top: 25px;
+    font-weight: 700;
+    font-size: 22px;
+     color:#fff;
+     margin-bottom: 25px;
+    
+  }
+  .cards-container {
+    padding: 0 32px 0 32px;
+    margin-top: 25px;
   }
 @media (max-width: 1450px) {
     .gap-10 {
