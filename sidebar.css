@@ -10,9 +10,10 @@
   background-color: #000000;
 }
 .sidebar-top {
-  height: 40vh;
+  
   border-bottom: 0.5px solid gray;
   margin-left: 20px;
+  margin-right: 20px;
 }
 .sidebar-item {
   text-decoration: none;
@@ -26,6 +27,9 @@
 }
 .sidebar-item span {
   padding: 0 7px;
+}
+.sidebar-item:last-of-type {
+  margin-bottom:20px
 }
 
 .sidebar-item-img {
