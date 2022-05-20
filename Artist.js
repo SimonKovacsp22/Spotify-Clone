@@ -210,3 +210,10 @@ SeeMore.addEventListener('click',function(event){
     }
 })
  
+const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+      "X-RapidAPI-Key": "8680b311b0mshfa595d3b50bced8p16d6f0jsnfe6371eab6a7",
+    },
+  }
